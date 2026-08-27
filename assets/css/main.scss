@@ -108,9 +108,50 @@ h1:before, .anchor:before {
     font-size: .8em;
 }
 
-.publications-intro {
-    margin-bottom: 1.5rem;
-    color: $gray;
+.citation-badge {
+    display: inline-flex;
+    align-items: stretch;
+    margin: 0 .15rem;
+    overflow: hidden;
+    border: 1px solid #cfd8e2;
+    border-radius: 3px;
+    vertical-align: -.28em;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+
+        .citation-badge__label {
+            background: #e8edf2;
+        }
+
+        .citation-badge__value {
+            background: #8fbee9;
+        }
+    }
+}
+
+.citation-badge__label,
+.citation-badge__value {
+    display: inline-flex;
+    align-items: center;
+    padding: .14rem .42rem;
+    font-size: .78rem;
+    line-height: 1.35;
+}
+
+.citation-badge__label {
+    gap: .25rem;
+    background: #f1f3f5;
+    color: #454b50;
+    font-weight: 500;
+}
+
+.citation-badge__value {
+    background: #a9d0f3;
+    color: #243b53;
+    font-weight: 700;
 }
 
 .publication-year {

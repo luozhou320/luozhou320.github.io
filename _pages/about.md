@@ -12,9 +12,9 @@ redirect_from:
 
 # About Me
 
-I am currently a postdoctoral researcher in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology (HKUST)](https://cse.hkust.edu.hk/), working with [Prof. Qian Zhang](https://seng.hkust.edu.hk/about/people/faculty/qian-zhang).
+I am currently a postdoctoral researcher in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology (HKUST)](https://cse.hkust.edu.hk/), working with [Prof. Qian Zhang (张黔)](https://seng.hkust.edu.hk/about/people/faculty/qian-zhang).
 
-In 2026, I received my Ph.D. in Software Engineering from Donghua University under the supervision of [Prof. Shan Chang](https://www.dhu.edu.cn/2021/0603/c19081a227424/pagem.htm). My research lies at the intersection of mobile and wearable computing, ubiquitous sensing, and IoT security and privacy. I am particularly interested in earable sensing, user authentication, side-channel security, and privacy-preserving intelligent systems, with an emphasis on practical sensing and interaction techniques for mobile, earable, and wearable devices.
+In 2026, I received my Ph.D. in Software Engineering from Donghua University under the supervision of [Prof. Shan Chang (常姗)](https://www.dhu.edu.cn/2021/0603/c19081a227424/pagem.htm). My research lies at the intersection of mobile and wearable computing, ubiquitous sensing, and IoT security and privacy. I am particularly interested in earable sensing, user authentication, side-channel security, and privacy-preserving intelligent systems, with an emphasis on practical sensing and interaction techniques for mobile, earable, and wearable devices. I have published 10+ papers in leading international conferences and journals, including IEEE INFOCOM, ICDCS, TMC, TDSC, IoT Journal, ACM MM, and ICASSP. My publications have received <a class="citation-badge" href="https://scholar.google.com/citations?user=3w2CkwIAAAAJ&hl=zh-CN" aria-label="View my citations on Google Scholar"><span class="citation-badge__label"><i class="fas fa-graduation-cap" aria-hidden="true"></i> citations</span><strong id="total_cit" class="citation-badge__value">—</strong></a> according to Google Scholar.
 
 <!-- <span class='anchor' id='research'></span>
 
@@ -33,8 +33,6 @@ My research lies at the intersection of mobile and wearable computing, ubiquitou
 
 # 📝 Publications
 
-<p class="publications-intro">A complete list of my published and accepted work. For the latest citation data, please visit my <a href="https://scholar.google.com/citations?user=3w2CkwIAAAAJ&hl=zh-CN">Google Scholar profile</a>. Total citations: <strong><span id="total_cit">see Google Scholar</span></strong>.</p>
-
 {% assign current_publication_year = "" %}
 {% for publication in site.data.publications %}
 {% capture publication_year %}{{ publication.year }}{% endcapture %}
@@ -49,7 +47,7 @@ My research lies at the intersection of mobile and wearable computing, ubiquitou
 
 # 💼 Experience
 
-- *2026–Present*, **Postdoctoral Researcher**, Department of Computer Science and Engineering, The Hong Kong University of Science and Technology. Working with Prof. Qian Zhang.
+- *2026–Present*, **Postdoctoral Researcher**, Department of Computer Science and Engineering, The Hong Kong University of Science and Technology. Working with Prof. Qian Zhang (张黔).
 - *2023*, **Visiting Scholar**, University of Electronic Science and Technology of China. Developed an earable sensing prototype for wearable sensing and security research.
 - *2020–2022*, **Mobile & IoT Systems Engineer**, Nanjing FiberHome Starry Sky Communication Co., Ltd.
 - *2019–2020*, **Industrial IoT Systems Engineer**, China Aviation Industry Information Center.
@@ -58,7 +56,7 @@ My research lies at the intersection of mobile and wearable computing, ubiquitou
 
 # 🎓 Education
 
-- *2022–2026*, **Ph.D. in Software Engineering**, Donghua University. Advised by Prof. Shan Chang; research focused on IoT security, mobile sensing, and computing.
+- *2022–2026*, **Ph.D. in Software Engineering**, Donghua University. Advised by Prof. Shan Chang (常姗); research focused on IoT security, mobile sensing, and computing.
 - *2017–2020*, **Master's degree in Electronic and Information Engineering**, Jiangsu University of Science and Technology.
 - *2013–2017*, **Bachelor's degree in Electronic and Information Engineering**, Tianjin Renai College.
 

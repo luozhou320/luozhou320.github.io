@@ -10,6 +10,7 @@
 
 - year: 2026
   title: "Baro2Talk: Reconstructing Spectrograms from Ear Canal Pressure for Voice-free Communication"
+  scholar_id: "3w2CkwIAAAAJ:_FxGoFyzp5QC"
   authors:
     - Luo Zhou
     - Shan Chang
@@ -32,6 +33,7 @@
 
 - year: 2026
   title: "Speak and Be Known: Authenticating Users via Ear Canal Deformation on Earbuds"
+  scholar_id: "3w2CkwIAAAAJ:ufrVoPGSRksC"
   authors:
     - Luo Zhou
     - Shan Chang
@@ -53,6 +55,7 @@
 
 - year: 2026
   title: "AirSpy: An Air-pinch Keystroke Inference Attack on Virtual Keyboards in VR Systems"
+  scholar_id: "3w2CkwIAAAAJ:W7OEmFMy1HYC"
   authors:
     - Luo Zhou
     - Jiusong Luo
@@ -73,6 +76,7 @@
 
 - year: 2026
   title: "A Secure Multimodal Retrieval Framework for Consumer Electronics Under AI-Driven Attacks"
+  scholar_id: "3w2CkwIAAAAJ:Tyk-4Ss8FVUC"
   authors:
     - Guodong Wang
     - Dongyang Ma
@@ -111,6 +115,7 @@
 
 - year: 2025
   title: "BaroAuth: Harnessing Ear Canal Deformation for Speaking User Authentication on Earbuds"
+  scholar_id: "3w2CkwIAAAAJ:d1gkVwhDpl0C"
   authors:
     - Luo Zhou
     - Shan Chang
@@ -134,6 +139,7 @@
 
 - year: 2025
   title: "Aclipse: Attention-Based Cascaded Learning Enabling Privacy-Preserving Speech Emotion Recognition"
+  scholar_id: "3w2CkwIAAAAJ:eQOLeE2rZwMC"
   authors:
     - Jiusong Luo
     - Shan Chang
@@ -153,6 +159,7 @@
 
 - year: 2025
   title: "Closed-Box 3-D Face Reconstruction Attack on Face Recognition From a Single Image"
+  scholar_id: "3w2CkwIAAAAJ:9yKSN-GCB0IC"
   authors:
     - Shizong Yan
     - Huixiang Wen
@@ -173,6 +180,7 @@
 
 - year: 2025
   title: "Combating Voice Spoofing Attacks on Wearables via Speech Movement Sequences"
+  scholar_id: "3w2CkwIAAAAJ:IjCSPb-OGe4C"
   authors:
     - Shan Chang
     - Luo Zhou
@@ -194,6 +202,7 @@
 
 - year: 2024
   title: "OptiCloak: Blinding Vision-Based Autonomous Driving Systems Through Adversarial Optical Projection"
+  scholar_id: "3w2CkwIAAAAJ:qjMakFHDy7sC"
   authors:
     - Huixiang Wen
     - Shan Chang
@@ -214,6 +223,7 @@
 
 - year: 2024
   title: "Fooling 3D Face Recognition with One Single 2D Image"
+  scholar_id: "3w2CkwIAAAAJ:UeHWp8X0CEIC"
   authors:
     - Shizong Yan
     - Huixiang Wen
@@ -234,6 +244,7 @@
 
 - year: 2023
   title: "Light Projection-Based Physical-World Vanishing Attack Against Car Detection"
+  scholar_id: "3w2CkwIAAAAJ:2osOgNQ5qMEC"
   authors:
     - Huixiang Wen
     - Shan Chang
@@ -252,6 +263,7 @@
 
 - year: 2021
   title: "Super-Resolution Reconstruction of Remote Sensing Images Based on GAN"
+  scholar_id: "3w2CkwIAAAAJ:Se3iqnhoufwC"
   authors:
     - Luo Zhou
     - Yan Xia
