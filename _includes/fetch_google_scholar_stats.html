@@ -6,11 +6,9 @@
     var cacheKey = Math.floor(Date.now() / 3600000);
     var cdnUrl = "https://cdn.jsdelivr.net/gh/" + repository + "@" + branch + "/" + dataPath + "?v=" + cacheKey;
     var rawUrl = "https://raw.githubusercontent.com/" + repository + "/" + branch + "/" + dataPath + "?v=" + cacheKey;
-    {% if site.google_scholar_stats_use_cdn %}
-    var sources = [cdnUrl, rawUrl];
-    {% else %}
+    // Prefer the uncached Raw endpoint so daily updates appear immediately.
+    // jsDelivr remains available as a resilient fallback.
     var sources = [rawUrl, cdnUrl];
-    {% endif %}
 
     function fetchFirstAvailable(urls) {
       return urls.reduce(function (previous, url) {
