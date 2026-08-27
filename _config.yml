@@ -12,6 +12,7 @@ repository               : "luozhou320/luozhou320.github.io"
 url                      : "https://luozhou320.github.io"
 baseurl                  : ""
 google_scholar_stats_use_cdn : true
+google_scholar_id        : "3w2CkwIAAAAJ"
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
@@ -24,8 +25,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Luo Zhou (周骆)"
-  avatar           : "images/20260824151044_2887_10.jpg"
+  avatar           : "images/20260824151043_2886_10.jpg"
   bio              : "Postdoctoral Researcher"
+  affiliation      : "CSE · HKUST"
   location         : "Hong Kong, China"
   employer         : "The Hong Kong University of Science and Technology"
   pubmed           : 

@@ -1,0 +1,53 @@
+{% assign publication = include.publication %}
+<article class="paper-box publication-card">
+  <div class="paper-box-image publication-card__media">
+    <div class="publication-card__media-inner">
+      <div class="badge">{{ publication.badge }}</div>
+      <a href="https://doi.org/{{ publication.doi }}" class="publication-thumbnail publication-thumbnail--{{ publication.theme }}" aria-label="Open {{ publication.title }}">
+        {% if publication.image %}
+          <img src="{{ publication.image | relative_url }}" alt="{{ publication.title }} thumbnail" loading="lazy">
+        {% else %}
+          <span class="publication-thumbnail__eyebrow">{{ publication.year }} · Research Publication</span>
+          <span class="publication-thumbnail__title">{{ publication.title }}</span>
+        {% endif %}
+      </a>
+    </div>
+  </div>
+
+  <div class="paper-box-text publication-card__content">
+    <h3 class="publication-card__title">
+      <a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a>
+    </h3>
+
+    <p class="publication-card__authors">
+      {% for author in publication.authors %}{% if author == "Luo Zhou" %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+    </p>
+
+    <p class="publication-card__venue">
+      <em>{{ publication.venue }}</em>{% if publication.details %}, {{ publication.details }}{% endif %}, {{ publication.year }}.
+    </p>
+
+    {% if publication.summary %}<p class="publication-card__summary">{{ publication.summary }}</p>{% endif %}
+
+    {% if publication.keywords %}
+      <div class="publication-card__keywords" aria-label="Research topics">
+        {% for keyword in publication.keywords %}<span>{{ keyword }}</span>{% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="publication-card__links">
+      {% if publication.pdf %}<a class="publication-resource publication-resource--pdf" href="{{ publication.pdf | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>{% endif %}
+      {% if publication.slides %}<a class="publication-resource publication-resource--slides" href="{{ publication.slides }}" target="_blank" rel="noopener"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> Slides</a>{% endif %}
+      {% if publication.poster %}<a class="publication-resource publication-resource--poster" href="{{ publication.poster }}" target="_blank" rel="noopener"><i class="fas fa-image" aria-hidden="true"></i> Poster</a>{% endif %}
+      {% if publication.code %}<a class="publication-resource publication-resource--code" href="{{ publication.code }}" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Code</a>{% endif %}
+      {% if publication.demo %}<a class="publication-resource publication-resource--demo" href="{{ publication.demo }}" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>{% endif %}
+      <a href="https://doi.org/{{ publication.doi }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> DOI</a>
+      <a href="https://scholar.google.com/scholar?q={{ publication.title | uri_escape }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+      <span
+        class="show_paper_citations"
+        data-scholar-id="{{ publication.scholar_id | default: '' | escape }}"
+        data-title="{{ publication.title | escape }}"
+        hidden></span>
+    </div>
+  </div>
+</article>

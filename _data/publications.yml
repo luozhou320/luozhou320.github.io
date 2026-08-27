@@ -1,0 +1,269 @@
+# Publications are displayed in this order on the homepage.
+# Optional resource fields are shown only when configured. Example:
+# image: /images/publications/baro2talk.png
+# pdf: /files/publications/baro2talk.pdf
+# slides: /files/publications/slides/baro2talk-slides.pdf
+# poster: /files/publications/posters/baro2talk-poster.pdf
+# code: https://github.com/username/baro2talk
+# demo: https://www.youtube.com/watch?v=example
+# `code` and `demo` may also point to local files under the directories below.
+
+- year: 2026
+  title: "Baro2Talk: Reconstructing Spectrograms from Ear Canal Pressure for Voice-free Communication"
+  authors:
+    - Luo Zhou
+    - Shan Chang
+    - Han Wang
+    - Xianbo Wang
+    - Hongzi Zhu
+  venue: "IEEE Conference on Computer Communications, Tokyo, Japan"
+  # details: ""
+  badge: "INFOCOM 2026"
+  doi: "10.1109/INFOCOM59046.2026.11571732"
+  summary: "Voice-free communication by reconstructing speech spectrograms from ear-canal pressure."
+  keywords:
+    - Earable sensing
+    - Voice-free communication
+  theme: earable
+  image: /images/publications/baro2talk.png
+  pdf: /files/publications/baro2talk.pdf
+  slides: /files/publications/slides/baro2talk-slide.pptx
+  poster: /files/publications/posters/baro2talk-poster.pdf
+
+- year: 2026
+  title: "Speak and Be Known: Authenticating Users via Ear Canal Deformation on Earbuds"
+  authors:
+    - Luo Zhou
+    - Shan Chang
+    - Jiusong Luo
+    - Huixiang Wen
+    - Hongzi Zhu
+    - Li Lu
+  venue: "IEEE Transactions on Mobile Computing"
+  details: "vol. 25, no. 7, pp. 11207–11226"
+  badge: "IEEE TMC"
+  doi: "10.1109/TMC.2026.3665282"
+  summary: "User authentication on earbuds using the deformation of the ear canal during speech."
+  keywords:
+    - User authentication
+    - Earbuds
+  theme: authentication
+  image: /images/publications/speak_and_be_known.png
+  pdf: /files/publications/speak_and_be_known.pdf
+
+- year: 2026
+  title: "AirSpy: An Air-pinch Keystroke Inference Attack on Virtual Keyboards in VR Systems"
+  authors:
+    - Luo Zhou
+    - Jiusong Luo
+    - Xueying Gong
+    - Jiaming Pei
+    - Wei Liu
+    - Huixiang Wen
+  venue: "IEEE Transactions on Consumer Electronics"
+  badge: "IEEE TCE"
+  doi: "10.1109/TCE.2026.3668225"
+  summary: "An investigation of keystroke-inference risks from air-pinch interactions on virtual keyboards in VR."
+  keywords:
+    - VR security
+    - Side-channel attack
+  theme: vr
+  image: /images/publications/airspy.png
+  pdf: /files/publications/airspy.pdf
+
+- year: 2026
+  title: "A Secure Multimodal Retrieval Framework for Consumer Electronics Under AI-Driven Attacks"
+  authors:
+    - Guodong Wang
+    - Dongyang Ma
+    - Luo Zhou
+    - Asma Hassan Alshehri
+    - Wenhao Li
+  venue: "IEEE Transactions on Consumer Electronics"
+  details: "vol. 72, no. 2, pp. 5177–5186"
+  badge: "IEEE TCE"
+  doi: "10.1109/TCE.2025.3643172"
+  summary: "A secure multimodal retrieval framework designed for consumer electronics under AI-driven attacks."
+  keywords:
+    - Multimodal retrieval
+    - AI security
+  theme: multimodal
+  image: /images/publications/SHRC-Net.png
+  pdf: /files/publications/SHRC-Net.pdf
+
+# - year: 2026
+#   title: "Mining Interaction-Intensive Cores in Temporal Graphs"
+#   authors:
+#     - Luo Zhou
+#     - Xueying Gong
+#     - Jinhu Lu
+#     - Yue Liang
+#     - Huixiang Wen
+#   venue: "Journal of King Saud University Computer and Information Sciences"
+#   details: "vol. 38, article 22"
+#   badge: "JKSU-CIS"
+#   doi: "10.1007/s44443-025-00391-x"
+#   summary: "Compact index structures for efficient interaction-intensive core queries in temporal graphs."
+#   keywords:
+#     - Temporal graphs
+#     - Core mining
+#   theme: graph
+
+- year: 2025
+  title: "BaroAuth: Harnessing Ear Canal Deformation for Speaking User Authentication on Earbuds"
+  authors:
+    - Luo Zhou
+    - Shan Chang
+    - Jiusong Luo
+    - Huixiang Wen
+    - Hongzi Zhu
+    - Li Lu
+  venue: "IEEE International Conference on Distributed Computing Systems, Glasgow, UK"
+  details: "pp. 111–121"
+  badge: "ICDCS 2025"
+  doi: "10.1109/ICDCS63083.2025.00020"
+  summary: "Speaking-user authentication using ear-canal deformation captured by earbuds."
+  keywords:
+    - Earable sensing
+    - Authentication
+  theme: earable
+  image: /images/publications/baroauth.png
+  pdf: /files/publications/baroauth.pdf
+  slides: files/publications/slides/baroauth-slide.pptx
+  poster: files/publications/posters/baroauth-poster.pdf
+
+- year: 2025
+  title: "Aclipse: Attention-Based Cascaded Learning Enabling Privacy-Preserving Speech Emotion Recognition"
+  authors:
+    - Jiusong Luo
+    - Shan Chang
+    - Luo Zhou
+    - Shizong Yan
+  venue: "2025 IEEE International Conference on Parallel and Distributed Systems (ICPADS)"
+  details: "pp. 1–8"
+  badge: "ICPADS 2025"
+  doi: "10.1109/ICPADS67057.2025.11322903"
+  summary: "Attention-based cascaded learning for privacy-preserving speech emotion recognition."
+  keywords:
+    - Speech privacy
+    - Emotion recognition
+  theme: privacy
+  image: /images/publications/Aclipse.png
+  pdf: /files/publications/Aclipse.pdf
+
+- year: 2025
+  title: "Closed-Box 3-D Face Reconstruction Attack on Face Recognition From a Single Image"
+  authors:
+    - Shizong Yan
+    - Huixiang Wen
+    - Shan Chang
+    - Hongzi Zhu
+    - Luo Zhou
+  venue: "IEEE Internet of Things Journal"
+  details: "vol. 12, no. 24, pp. 52179–52193"
+  badge: "IEEE IoT-J"
+  doi: "10.1109/JIOT.2025.3618402"
+  summary: "A closed-box 3-D face-reconstruction attack using a single 2-D facial image."
+  keywords:
+    - Face recognition
+    - Security
+  theme: vision
+  image: /images/publications/DREAM.png
+  pdf: /files/publications/DREAM.pdf
+
+- year: 2025
+  title: "Combating Voice Spoofing Attacks on Wearables via Speech Movement Sequences"
+  authors:
+    - Shan Chang
+    - Luo Zhou
+    - Wei Liu
+    - Hongzi Zhu
+    - Xinggang Hu
+    - Lei Yang
+  venue: "IEEE Transactions on Dependable and Secure Computing"
+  details: "vol. 22, no. 1, pp. 819–832"
+  badge: "IEEE TDSC"
+  doi: "10.1109/TDSC.2024.3418908"
+  summary: "Voice-spoofing defense for wearables based on sequences of speech-related movement."
+  keywords:
+    - Voice spoofing
+    - Wearable security
+  theme: authentication
+  image: /images/publications/gyrotalk.png
+  pdf: /files/publications/gyrotalk.pdf
+
+- year: 2024
+  title: "OptiCloak: Blinding Vision-Based Autonomous Driving Systems Through Adversarial Optical Projection"
+  authors:
+    - Huixiang Wen
+    - Shan Chang
+    - Luo Zhou
+    - Wei Liu
+    - Hongzi Zhu
+  venue: "IEEE Internet of Things Journal"
+  details: "vol. 11, no. 17, pp. 28931–28944"
+  badge: "IEEE IoT-J"
+  doi: "10.1109/JIOT.2024.3405006"
+  summary: "An adversarial optical-projection attack against vision-based autonomous-driving systems."
+  keywords:
+    - Autonomous driving
+    - Physical attack
+  theme: vision
+  image: /images/publications/OptiCloak.png
+  pdf: /files/publications/OptiCloak.pdf
+
+- year: 2024
+  title: "Fooling 3D Face Recognition with One Single 2D Image"
+  authors:
+    - Shizong Yan
+    - Huixiang Wen
+    - Shan Chang
+    - Hongzi Zhu
+    - Luo Zhou
+  venue: "Proceedings of the 32nd ACM International Conference on Multimedia (ACM MM)"
+  details: "pp. 4043–4052"
+  badge: "ACM MM 2024"
+  doi: "10.1145/3664647.3680840"
+  summary: "An attack on 3-D face-recognition systems using a single 2-D facial image."
+  keywords:
+    - 3-D face recognition
+    - Security
+  theme: vision
+  image: /images/publications/dream_mm.png
+  pdf: /files/publications/dream_mm.pdf
+
+- year: 2023
+  title: "Light Projection-Based Physical-World Vanishing Attack Against Car Detection"
+  authors:
+    - Huixiang Wen
+    - Shan Chang
+    - Luo Zhou
+  venue: "2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  details: "pp. 1–5"
+  badge: "ICASSP 2023"
+  doi: "10.1109/ICASSP49357.2023.10095895"
+  summary: "A physical-world optical attack designed to make cars vanish from object-detection results."
+  keywords:
+    - Car detection
+    - Physical attack
+  theme: vision
+  image: /images/publications/light_projection.png
+  pdf: /files/publications/light_projection.pdf
+
+- year: 2021
+  title: "Super-Resolution Reconstruction of Remote Sensing Images Based on GAN"
+  authors:
+    - Luo Zhou
+    - Yan Xia
+    - Zhen Liu
+  venue: "2021 IEEE International Conference on Data Science and Computer Application (ICDSCA)"
+  details: "pp. 270–274"
+  badge: "ICDSCA 2021"
+  doi: "10.1109/ICDSCA53499.2021.9649727"
+  summary: "GAN-based super-resolution reconstruction for remote-sensing imagery."
+  keywords:
+    - Remote sensing
+    - Super-resolution
+  theme: remote-sensing
+  image: /images/publications/Super-Resolution.png
+  pdf: /files/publications/Super-Resolution.pdf

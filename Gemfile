@@ -18,6 +18,10 @@ gem "github-pages", group: :jekyll_plugins
 
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
+# Ruby 3 no longer ships WEBrick in the standard library. Hawkins uses it for
+# the local live-reload server.
+gem "webrick", "~> 1.8", group: :development
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # gem "jekyll-archives"

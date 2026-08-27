@@ -1,29 +1,83 @@
-name: Get Citation Data
+name: Update Google Scholar Citations
 
-on: 
- page_build: 
- schedule:
-  - cron:  '0 8 * * *'
+on:
+  workflow_dispatch:
+  schedule:
+    # Run once a day at 08:00 UTC (16:00 Asia/Shanghai).
+    - cron: "0 8 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/google_scholar_crawler.yaml"
+      - "google_scholar_crawler/**"
+      - "_config.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: google-scholar-citations
+  cancel-in-progress: false
 
 jobs:
-  build:
+  update-citations:
+    name: Fetch and publish citation data
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Reqs
-      run: |
-        sudo apt-get install python3-setuptools
-    - name: Run
-      run: |
-        cd ./google_scholar_crawler
-        pip3 install -r requirements.txt
-        python3 main.py
-        cd ./results
-        git init
-        git config --local user.name "${GITHUB_ACTOR}"
-        export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-        git add *.json
-        git commit -m "Updated Citation Data"
-        git push "${remote_repo}" HEAD:google-scholar-stats --force
-      env: 
-        GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+      - name: Check out the homepage
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: google_scholar_crawler/requirements.txt
+
+      - name: Install crawler dependencies
+        run: python -m pip install --upgrade --requirement google_scholar_crawler/requirements.txt
+
+      - name: Read the public Scholar ID from the site config
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          config = Path("_config.yml").read_text(encoding="utf-8")
+          match = re.search(
+              r'^google_scholar_id\s*:\s*["\']?([^"\'\s#]+)',
+              config,
+              flags=re.MULTILINE,
+          )
+          if not match:
+              raise SystemExit("google_scholar_id is missing from _config.yml")
+
+          with Path(os.environ["GITHUB_ENV"]).open("a", encoding="utf-8") as env_file:
+              env_file.write(f"GOOGLE_SCHOLAR_ID={match.group(1)}\n")
+          PY
+
+      - name: Fetch and validate citation data
+        run: python -u google_scholar_crawler/main.py
+
+      - name: Publish citation data branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          publish_dir="${RUNNER_TEMP}/google-scholar-stats"
+          mkdir -p "${publish_dir}"
+          cp google_scholar_crawler/results/gs_data.json "${publish_dir}/"
+          cp google_scholar_crawler/results/gs_data_shieldsio.json "${publish_dir}/"
+          touch "${publish_dir}/.nojekyll"
+
+          cd "${publish_dir}"
+          git init --initial-branch=google-scholar-stats
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .nojekyll gs_data.json gs_data_shieldsio.json
+          git commit -m "Update Google Scholar citation data"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin HEAD:google-scholar-stats

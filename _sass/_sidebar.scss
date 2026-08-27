@@ -79,27 +79,28 @@
 }
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 75px;
-  // set width only, for non-square avatars
-  // height: 36px;
-
-  @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
-  }
+  display: block;
+  width: 88px;
+  max-width: 175px;
+  min-width: 75px;
+  flex: 0 0 88px;
+  padding: 5px;
+  border: 1px solid $border-color;
+  background: #fff;
+  box-sizing: border-box;
 
   img {
-    max-width: 175px;
-    min-width: 75px;
-    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center;
+  }
 
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
+  @include breakpoint($large) {
+    width: 100%;
+    flex: none;
   }
 }
 
@@ -108,6 +109,7 @@
   vertical-align: top;
   padding-left: 10px;
   min-width: 120px;
+  max-width: 100%;
   // padding-right: 25px;
   line-height: 1;
 
@@ -138,11 +140,19 @@
 
 .author__bio {
   margin: 0;
+  line-height: 1.35;
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 0;
   }
+}
+
+.author__affiliation {
+  margin: 4px 0 0;
+  color: mix(#fff, $text-color, 25%);
+  font-size: $type-size-5;
+  line-height: 1.35;
 }
 
 .author__urls-wrapper {
@@ -192,7 +202,7 @@
   @include breakpoint($large) {
     display: block;
     position: relative;
-    margin: 0;
+    margin: 14px 0 0;
     padding: 0;
     border: 0;
     background: transparent;
@@ -234,7 +244,10 @@
   }
 
   li {
-    white-space: nowrap;
+    max-width: 100%;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   a {
