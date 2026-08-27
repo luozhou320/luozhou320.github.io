@@ -48,7 +48,7 @@ My research lies at the intersection of mobile and wearable computing, ubiquitou
 # 💼 Experience
 
 - *2026–Present*, **Postdoctoral Researcher**, Department of Computer Science and Engineering, The Hong Kong University of Science and Technology. Working with Prof. Qian Zhang (张黔).
-- *2023*, **Visiting Scholar**, University of Electronic Science and Technology of China. Developed an earable sensing prototype for wearable sensing and security research.
+- *2023*, **Visiting Scholar**, University of Electronic Science and Technology of China (UESTC), advised by [Prof. Li Lu (鲁力)](https://www.scse.uestc.edu.cn/info/1081/12001.htm). Developed an earable sensing prototype for wearable sensing and security research.
 - *2020–2022*, **Mobile & IoT Systems Engineer**, Nanjing FiberHome Starry Sky Communication Co., Ltd.
 - *2019–2020*, **Industrial IoT Systems Engineer**, China Aviation Industry Information Center.
 
