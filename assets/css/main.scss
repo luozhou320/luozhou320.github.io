@@ -46,7 +46,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px $border-color solid;
+    border-bottom: 1px #efefef solid;
     padding: 2em 0 2em 0;
     
 
@@ -57,8 +57,7 @@
         order: 2;
         img {
             max-width: 400px;
-            border-radius: $border-radius;
-            box-shadow: $box-shadow;
+            box-shadow: 3px 3px 6px #888;
             object-fit: cover;
         }
     }
@@ -105,11 +104,8 @@ h1:before, .anchor:before {
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: $info-color;
-    border-radius: 3px;
+    background-color: #00369f;
     font-size: .8em;
-    font-weight: 600;
-    letter-spacing: .02em;
 }
 
 .citation-badge {
@@ -161,9 +157,8 @@ h1:before, .anchor:before {
 .publication-year {
     margin: 2rem 0 0;
     padding-bottom: .45rem;
-    border-bottom: 2px solid mix($info-color, white, 18%);
-    color: $primary-color;
-    font-family: $header-font-family;
+    border-bottom: 2px solid mix(#00369f, white, 18%);
+    color: #00369f;
     font-size: 1.35rem;
 }
 
@@ -194,9 +189,9 @@ h1:before, .anchor:before {
         overflow: hidden;
         flex-direction: column;
         justify-content: flex-end;
-        border-radius: $border-radius;
-        background: linear-gradient(145deg, #172554, #2563eb);
-        box-shadow: $box-shadow;
+        border-radius: 4px;
+        background: linear-gradient(145deg, #173963, #2f77aa);
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, .2);
         color: #fff;
         text-decoration: none;
         isolation: isolate;
@@ -330,8 +325,8 @@ h1:before, .anchor:before {
         span {
             padding: .18rem .5rem;
             border-radius: 999px;
-            background: #f4f4f5;
-            color: #3f3f46;
+            background: #eef3f8;
+            color: #3d5368;
             font-size: .7rem;
             font-weight: 600;
         }
@@ -343,17 +338,17 @@ h1:before, .anchor:before {
         a,
         .show_paper_citations {
             padding: .28rem .58rem;
-            border: 1px solid $border-color;
+            border: 1px solid #d6dde5;
             border-radius: 3px;
-            color: $info-color;
+            color: #315f91;
             font-size: .76rem;
             font-weight: 600;
             text-decoration: none;
         }
 
         a:hover {
-            border-color: $info-color;
-            background: #eff6ff;
+            border-color: #315f91;
+            background: #f5f8fb;
         }
 
         .publication-resource--pdf i {

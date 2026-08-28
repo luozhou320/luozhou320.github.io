@@ -6,16 +6,19 @@
    Typography
    ========================================================================== */
 
-$doc-font-size              : 16;
+$doc-font-size              : 14;
 
 /* paragraph indention */
 $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 0.5em;
 
 /* system typefaces */
-$serif                      : "Source Serif 4", Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : "JetBrains Mono", Monaco, Consolas, "Lucida Console", monospace;
+$serif                      : Georgia, Times, serif;
+$sans-serif                 : "Trebuchet MS", Helvetica, sans-serif;
+// $sans-serif                 : Georgia, serif, sans-serif;
+
+// $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
@@ -28,8 +31,8 @@ $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
-$global-font-family         : $serif;
-$header-font-family         : "Playfair Display", Georgia, serif;
+$global-font-family         : $sans-serif;
+$header-font-family         : $sans-serif;
 $caption-font-family        : $serif;
 
 /* type scale */
@@ -47,24 +50,25 @@ $type-size-8                : 0.625em;  // ~10px
    Colors
    ========================================================================== */
 
-$gray                       : #3f3f46;
-$dark-gray                  : #27272a;
-$darker-gray                : #18181b;
-$light-gray                 : #a1a1aa;
-$lighter-gray               : #e4e4e7;
+$gray                       : #7a8288;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #fafafa;
-$background-color           : #fafafa;
-$code-background-color      : #f4f4f5;
-$code-background-color-dark : $lighter-gray;
-$text-color                 : #18181b;
-$border-color               : #e4e4e7;
+$body-color                 : #fff;
+$background-color           : #fff;
+$code-background-color      : #fafafa;
+$code-background-color-dark : $light-gray;
+$text-color                 : $dark-gray;
+$border-color               : $lighter-gray;
 
-$primary-color              : #18181b;
-$success-color              : #16a34a;
-$warning-color              : #d97706;
-$danger-color               : #dc2626;
-$info-color                 : #2563eb;
+$primary-color              : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+$danger-color               : #ee5f5b;
+$info-color                 : #224b8d;
+// $info-color                 : #52adc8;
 
 /* brands */
 $behance-color              : #1769FF;
@@ -92,9 +96,9 @@ $xing-color                 : #006567;
 /* links */
 $link-color                 : $info-color;
 $link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#000, $link-color, 10%);
+$link-color-visited         : mix(#fff, $link-color, 25%);
 $masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : $info-color;
+$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
 
 
 /*
@@ -146,8 +150,8 @@ $susy: (
    Other
    ========================================================================== */
 
-$border-radius              : 6px;
-$box-shadow                 : 0 1px 2px rgba(9, 9, 11, 0.06), 0 4px 12px rgba(9, 9, 11, 0.05);
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $global-transition          : all 0.2s ease-in-out;

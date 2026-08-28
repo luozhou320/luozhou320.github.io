@@ -86,16 +86,13 @@
   flex: 0 0 88px;
   padding: 5px;
   border: 1px solid $border-color;
-  border-radius: $border-radius;
   background: #fff;
-  box-shadow: $box-shadow;
   box-sizing: border-box;
 
   img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: $border-radius - 2px;
     aspect-ratio: 2 / 3;
     object-fit: cover;
     object-position: center;
@@ -137,7 +134,7 @@
   @include breakpoint($medium) {
     font-size: $type-size-3;
   }
-  font-family: $header-font-family;
+  font-family: $sans-serif;
   font-size: $type-size-4;
 }
 
@@ -262,12 +259,9 @@
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
-    -webkit-transition: color 0.15s ease-in-out;
-            transition: color 0.15s ease-in-out;
 
     &:hover {
-      color: $info-color;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }
