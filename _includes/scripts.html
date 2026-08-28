@@ -1,4 +1,28 @@
 <script src="assets/js/main.min.js"></script>
 
+<script>
+  (function () {
+    var button = document.querySelector('#site-nav button');
+    var overflow = document.getElementById('site-nav-overflow');
+    if (!button || !overflow) return;
+
+    function syncNavigationState() {
+      button.setAttribute('aria-expanded', String(!overflow.classList.contains('hidden')));
+    }
+
+    button.addEventListener('click', function () {
+      window.requestAnimationFrame(syncNavigationState);
+    });
+
+    overflow.addEventListener('click', function (event) {
+      if (event.target.closest('a')) {
+        overflow.classList.add('hidden');
+        button.classList.remove('close');
+        syncNavigationState();
+      }
+    });
+  }());
+</script>
+
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}

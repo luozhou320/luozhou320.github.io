@@ -9,7 +9,9 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body class="linux-cli-theme">
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -17,9 +19,13 @@ layout: compress
     <div id="main" role="main">
       {% include sidebar.html %}
     
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+      <article id="main-content" class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
+          <div class="document-window__bar" aria-hidden="true">
+            <span>~/homepage/README.md — vim</span>
+            <span>UTF-8&nbsp;&nbsp;100%</span>
+          </div>
           <section class="page__content" itemprop="text">
             {{ content }}
           </section>
