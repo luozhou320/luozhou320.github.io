@@ -26,6 +26,27 @@
 
 <script>
   (function () {
+    var profile = document.querySelector('.profile_box');
+    var button = profile && profile.querySelector('.author__details-toggle');
+    var label = button && button.querySelector('.author__details-toggle-label');
+    if (!profile || !button || !label) return;
+
+    function setProfileDetails(expanded) {
+      profile.classList.toggle('profile_box--expanded', expanded);
+      button.setAttribute('aria-expanded', String(expanded));
+      label.textContent = expanded ? 'hide profile details' : 'show profile details';
+    }
+
+    button.addEventListener('click', function () {
+      setProfileDetails(button.getAttribute('aria-expanded') !== 'true');
+    });
+
+    setProfileDetails(false);
+  }());
+</script>
+
+<script>
+  (function () {
     var selector = document.getElementById('theme-selector');
     var themeColor = document.getElementById('theme-color');
     var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');

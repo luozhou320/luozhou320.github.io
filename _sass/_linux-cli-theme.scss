@@ -391,6 +391,10 @@ html[data-theme="light"] {
     cursor: default;
   }
 
+  .author__details-toggle {
+    display: none;
+  }
+
   .author__urls {
     display: block !important;
     position: static;
@@ -855,20 +859,91 @@ html[data-theme="light"] {
       padding: .45rem .5rem;
     }
 
-    .profile_box {
-      grid-template-columns: 110px minmax(0, 1fr);
+    .greedy-nav button {
+      right: auto;
+      left: 0;
+    }
+
+    .greedy-nav .visible-links {
+      margin-left: 44px;
+    }
+
+    .greedy-nav .hidden-links {
+      right: auto;
+      left: 0;
+      z-index: 20;
+      width: min(20rem, calc(100vw - 2rem));
+      max-width: calc(100vw - 2rem);
+      margin-top: .4rem;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .profile_box__sticky {
+      grid-template-columns: 96px minmax(0, 1fr);
     }
 
     .author__avatar {
-      margin: .7rem;
+      margin: .65rem;
+      padding: .25rem;
     }
 
     .author__content {
-      padding: .7rem .7rem .7rem 0;
+      padding: .65rem .65rem .65rem 0;
     }
 
     .author__name {
       font-size: .95rem;
+    }
+
+    .author__bio,
+    .author__affiliation {
+      font-size: .76rem;
+      line-height: 1.4;
+    }
+
+    .author__urls-wrapper {
+      padding: 0 .7rem .65rem;
+      border-top: 1px dashed var(--terminal-border);
+    }
+
+    .author__details-toggle {
+      display: inline-flex;
+      width: 100%;
+      min-height: 44px;
+      padding: .35rem 0;
+      border: 0;
+      align-items: center;
+      gap: .55rem;
+      background: transparent;
+      color: var(--terminal-blue);
+      font-family: $terminal-mono;
+      font-size: .78rem;
+      text-align: left;
+      cursor: pointer;
+
+      &::before {
+        content: ">";
+        color: var(--terminal-green);
+      }
+
+      &::after {
+        content: "[+]";
+        margin-left: auto;
+        color: var(--terminal-muted);
+      }
+
+      &[aria-expanded="true"]::after {
+        content: "[−]";
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--terminal-green);
+        outline-offset: 2px;
+      }
     }
 
     .page__content {
@@ -899,6 +974,9 @@ html[data-theme="light"] {
 
     .author__urls {
       display: grid !important;
+      margin-top: .1rem;
+      padding-top: .25rem;
+      border-top: 0;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0 .65rem;
 
@@ -912,6 +990,10 @@ html[data-theme="light"] {
       .author__detail {
         grid-column: 1 / -1;
       }
+    }
+
+    .profile_box:not(.profile_box--expanded) .author__urls {
+      display: none !important;
     }
 
     .greedy-nav .hidden-links a,

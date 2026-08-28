@@ -50,11 +50,11 @@ My research lies at the intersection of mobile and wearable computing, ubiquitou
 - *2020–2022*, **Mobile & IoT Systems Engineer**, Nanjing FiberHome Starry Sky Communication Co., Ltd.
 - *2019–2020*, **Industrial IoT Systems Engineer**, China Aviation Industry Information Center.
 
-<!-- # Education
+# Education
 
 - *2022–2026*, **Ph.D. in Software Engineering**, Donghua University. Advised by Prof. Shan Chang (常姗); research focused on IoT security, mobile sensing, and computing.
 - *2017–2020*, **Master's degree in Electronic and Information Engineering**, Jiangsu University of Science and Technology.
-- *2013–2017*, **Bachelor's degree in Electronic and Information Engineering**, Tianjin Renai College. -->
+- *2013–2017*, **Bachelor's degree in Electronic and Information Engineering**, Tianjin Renai College.
 
 # Research Project
 

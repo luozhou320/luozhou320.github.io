@@ -21,8 +21,11 @@
   </div>
 
   <div class="author__urls-wrapper">
+    <button class="author__details-toggle" type="button" aria-expanded="false" aria-controls="author-profile-details">
+      <span class="author__details-toggle-label">show profile details</span>
+    </button>
     <!-- Contact commands -->
-    <ul class="author__urls social-icons">
+    <ul id="author-profile-details" class="author__urls social-icons">
       {% if author.employer %}
         <li class="author__detail author__employer"><i class="fa fa-fw fa-building" aria-hidden="true"></i> {{ author.employer }}</li>
       {% endif %}
