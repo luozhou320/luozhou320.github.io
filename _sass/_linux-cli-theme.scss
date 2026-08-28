@@ -330,9 +330,9 @@ html[data-theme="light"] {
   }
 
   .author__avatar {
-    width: auto;
-    max-width: none;
-    margin: .9rem .9rem 0;
+    width: calc(100% - 2.6rem);
+    max-width: 220px;
+    margin: 1rem auto 0;
     padding: .35rem;
     border: 1px solid var(--terminal-border);
     background: var(--terminal-bg);
@@ -829,6 +829,8 @@ html[data-theme="light"] {
     }
 
     .author__avatar {
+      width: auto;
+      max-width: none;
       margin: .9rem;
     }
 
