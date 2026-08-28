@@ -3,7 +3,7 @@
   <div class="paper-box-image publication-card__media">
     <div class="publication-card__media-inner">
       <div class="badge"><span aria-hidden="true">venue:</span> {{ publication.badge }}</div>
-      <a href="https://doi.org/{{ publication.doi }}" class="publication-thumbnail publication-thumbnail--{{ publication.theme }}" aria-label="Open {{ publication.title }}">
+      <a href="https://doi.org/{{ publication.doi }}" class="publication-thumbnail publication-thumbnail--{{ publication.theme }}" aria-label="Open {{ publication.title }}" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="doi" data-analytics-context="thumbnail">
         {% if publication.image %}
           <img src="{{ publication.image | relative_url }}" alt="{{ publication.title }} thumbnail" loading="lazy">
         {% else %}
@@ -16,7 +16,7 @@
 
   <div class="paper-box-text publication-card__content">
     <h3 class="publication-card__title">
-      <a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a>
+      <a href="https://doi.org/{{ publication.doi }}" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="doi" data-analytics-context="title">{{ publication.title }}</a>
     </h3>
 
     <p class="publication-card__authors">
@@ -36,13 +36,13 @@
     {% endif %}
 
     <div class="publication-card__links">
-      {% if publication.pdf %}<a class="publication-resource publication-resource--pdf" href="{{ publication.pdf | relative_url }}" target="_blank" rel="noopener">PDF</a>{% endif %}
-      {% if publication.slides %}<a class="publication-resource publication-resource--slides" href="{{ publication.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
-      {% if publication.poster %}<a class="publication-resource publication-resource--poster" href="{{ publication.poster }}" target="_blank" rel="noopener">Poster</a>{% endif %}
-      {% if publication.code %}<a class="publication-resource publication-resource--code" href="{{ publication.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
-      {% if publication.demo %}<a class="publication-resource publication-resource--demo" href="{{ publication.demo }}" target="_blank" rel="noopener">Demo</a>{% endif %}
-      <a href="https://doi.org/{{ publication.doi }}">DOI</a>
-      <a href="https://scholar.google.com/scholar?q={{ publication.title | uri_escape }}">Scholar</a>
+      {% if publication.pdf %}<a class="publication-resource publication-resource--pdf" href="{{ publication.pdf | relative_url }}" target="_blank" rel="noopener" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="pdf" data-analytics-context="resource-button">PDF</a>{% endif %}
+      {% if publication.slides %}<a class="publication-resource publication-resource--slides" href="{{ publication.slides }}" target="_blank" rel="noopener" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="slides" data-analytics-context="resource-button">Slides</a>{% endif %}
+      {% if publication.poster %}<a class="publication-resource publication-resource--poster" href="{{ publication.poster }}" target="_blank" rel="noopener" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="poster" data-analytics-context="resource-button">Poster</a>{% endif %}
+      {% if publication.code %}<a class="publication-resource publication-resource--code" href="{{ publication.code }}" target="_blank" rel="noopener" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="code" data-analytics-context="resource-button">Code</a>{% endif %}
+      {% if publication.demo %}<a class="publication-resource publication-resource--demo" href="{{ publication.demo }}" target="_blank" rel="noopener" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="demo" data-analytics-context="resource-button">Demo</a>{% endif %}
+      <a href="https://doi.org/{{ publication.doi }}" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="doi" data-analytics-context="resource-button">DOI</a>
+      <a href="https://scholar.google.com/scholar?q={{ publication.title | uri_escape }}" data-analytics-paper="{{ publication.title | escape }}" data-analytics-resource="scholar" data-analytics-context="resource-button">Scholar</a>
       <span
         class="show_paper_citations"
         data-scholar-id="{{ publication.scholar_id | default: '' | escape }}"

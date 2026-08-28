@@ -1,13 +1,49 @@
-{% if page.analytics != false %}
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+{% assign analytics_id = site.google_analytics_id | default: "" | strip %}
+{% if page.analytics != false and analytics_id != "" %}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function () {
+    "use strict";
 
-  gtag('config', "{{ site.google_analytics_id }}");
+    var measurementId = {{ analytics_id | jsonify }};
+    var productionUrl = {{ site.url | jsonify }};
+    var productionHost;
+
+    try {
+      productionHost = new URL(productionUrl).hostname;
+    } catch (error) {
+      return;
+    }
+
+    // Keep local previews and other mirrors out of the production GA property.
+    if (window.location.hostname !== productionHost) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+
+    var googleTag = document.createElement("script");
+    googleTag.async = true;
+    googleTag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+    document.head.appendChild(googleTag);
+
+    window.gtag("js", new Date());
+    window.gtag("config", measurementId);
+
+    document.addEventListener("click", function (event) {
+      var target = event.target instanceof Element
+        ? event.target.closest("a[data-analytics-paper]")
+        : null;
+
+      if (!target) return;
+
+      window.gtag("event", "publication_click", {
+        paper_title: target.dataset.analyticsPaper,
+        resource_type: target.dataset.analyticsResource || "publication",
+        link_context: target.dataset.analyticsContext || "unknown",
+        link_url: target.href
+      });
+    });
+  }());
 </script>
-
 {% endif %}

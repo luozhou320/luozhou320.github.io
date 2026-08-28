@@ -11,6 +11,11 @@
 
 cd "$(dirname "$0")"
 
+# The legacy Sass compiler reads a few dependency files as US-ASCII unless
+# the process locale is explicitly UTF-8.
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 BUNDLE=/opt/homebrew/bin/bundle
 if [ ! -x "$BUNDLE" ]; then
   BUNDLE=$(command -v bundle)

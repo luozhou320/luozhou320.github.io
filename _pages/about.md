@@ -14,11 +14,7 @@ redirect_from:
 
 I am currently a postdoctoral researcher in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/), working with [Prof. Qian Zhang (张黔)](https://seng.hkust.edu.hk/about/people/faculty/qian-zhang).
 
-In June 2026, I obtained my Ph.D. degree in Software Engineering from [Donghua University (DHU)](https://english.dhu.edu.cn/) under the supervision of [Prof. Shan Chang (常姗)](https://www.dhu.edu.cn/2021/0603/c19081a227424/pagem.htm).
-
-My research lies at the intersection of mobile and wearable computing, ubiquitous sensing, and IoT security and privacy. I am particularly interested in earable sensing, user authentication, side-channel security, and privacy-preserving intelligent systems, with an emphasis on practical sensing and interaction techniques for mobile, earable, and wearable devices.
-
-I have published 10+ papers in leading international conferences and journals, including IEEE INFOCOM, ICDCS, TMC, TDSC, IoT Journal, ACM MM, and ICASSP. My publications have received <a class="citation-badge" href="https://scholar.google.com/citations?user=3w2CkwIAAAAJ&hl=zh-CN" aria-label="View my citations on Google Scholar"><span class="citation-badge__label">citations:</span><strong id="total_cit" class="citation-badge__value">—</strong></a> according to Google Scholar.
+In June 2026, I obtained my Ph.D. degree in Software Engineering from [Donghua University (DHU)](https://english.dhu.edu.cn/) under the supervision of [Prof. Shan Chang (常姗)](https://www.dhu.edu.cn/2021/0603/c19081a227424/pagem.htm). My research lies at the intersection of mobile and wearable computing, ubiquitous sensing, and IoT security and privacy. I have published 10+ papers in leading international conferences and journals, including IEEE INFOCOM, ICDCS, TMC, TDSC, IoT Journal, ACM MM, and ICASSP. My publications have received <a class="citation-badge" href="https://scholar.google.com/citations?user=3w2CkwIAAAAJ&hl=zh-CN" aria-label="View my citations on Google Scholar"><span class="citation-badge__label">citations:</span><strong id="total_cit" class="citation-badge__value">—</strong></a> according to Google Scholar.
 
 </div>
 
