@@ -77,6 +77,10 @@ html[data-theme="light"] {
 }
 
 .linux-cli-theme {
+  // 44px navigation row + .7rem vertical padding + the masthead border.
+  // Keep the sidebar's sticky offset coupled to the masthead's own sizing.
+  --terminal-masthead-height: calc(44px + 1.4rem + 1px);
+
   min-width: 0;
   min-height: 100vh;
   min-height: 100dvh;
@@ -260,12 +264,16 @@ html[data-theme="light"] {
   .profile_box__sticky {
     display: flex;
     position: sticky;
-    top: 5rem;
+    top: calc(var(--terminal-masthead-height) + 1px);
+    z-index: 2;
     overflow: hidden;
     flex-direction: column;
     align-items: stretch;
     border-radius: 3px;
     background: var(--terminal-surface);
+    // Restore only the top edge after the outer frame scrolls away. A full
+    // outline would create an incorrect horizontal divider below the profile.
+    box-shadow: 0 -1px 0 var(--terminal-border);
   }
 
   .terminal-panel__bar,
