@@ -24,5 +24,64 @@
   }());
 </script>
 
+<script>
+  (function () {
+    var selector = document.getElementById('theme-selector');
+    var themeColor = document.getElementById('theme-color');
+    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (!selector) return;
+
+    function readSavedTheme() {
+      try {
+        var savedTheme = window.localStorage.getItem('luozhou-color-theme');
+        return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'system';
+      } catch (error) {
+        return 'system';
+      }
+    }
+
+    function resolvedTheme(theme) {
+      return theme === 'system' ? (systemTheme.matches ? 'dark' : 'light') : theme;
+    }
+
+    function updateThemeColor(theme) {
+      if (themeColor) {
+        themeColor.setAttribute('content', resolvedTheme(theme) === 'dark' ? '#1e1e1e' : '#feffff');
+      }
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'system') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+
+      try {
+        if (theme === 'system') {
+          window.localStorage.removeItem('luozhou-color-theme');
+        } else {
+          window.localStorage.setItem('luozhou-color-theme', theme);
+        }
+      } catch (error) {
+        // The selected theme still applies for this page view.
+      }
+
+      selector.value = theme;
+      updateThemeColor(theme);
+    }
+
+    selector.addEventListener('change', function () {
+      applyTheme(selector.value);
+    });
+
+    systemTheme.addEventListener('change', function () {
+      if (selector.value === 'system') updateThemeColor('system');
+    });
+
+    applyTheme(readSavedTheme());
+  }());
+</script>
+
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}

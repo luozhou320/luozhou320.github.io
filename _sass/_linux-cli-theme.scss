@@ -2,45 +2,107 @@
    Linux CLI + Markdown theme
    ========================================================================== */
 
-$terminal-bg: #000;
-$terminal-surface: #020702;
-$terminal-surface-raised: #061006;
-$terminal-border: #286d24;
-$terminal-text: #28fe14;
-$terminal-muted: #77ad72;
-$terminal-green: #00ff00;
-$terminal-green-strong: #38fe27;
-$terminal-blue: #71d9ff;
-$terminal-purple: #ef8cff;
-$terminal-amber: #ffd75f;
 $terminal-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
+@mixin apple-system-colors-dark {
+  --terminal-bg: #1e1e1e;
+  --terminal-bg-rgb: 30, 30, 30;
+  --terminal-surface: #1a1a1a;
+  --terminal-surface-raised: #252525;
+  --terminal-border: #464646;
+  --terminal-text: #ffffff;
+  --terminal-text-strong: #ffffff;
+  --terminal-text-subtle: #e5e5e7;
+  --terminal-muted: #98989d;
+  --terminal-green: #32d74b;
+  --terminal-green-rgb: 50, 215, 75;
+  --terminal-green-strong: #26a439;
+  --terminal-blue: #76d6ff;
+  --terminal-blue-hover: #0a84ff;
+  --terminal-blue-rgb: 118, 214, 255;
+  --terminal-purple: #bf5af2;
+  --terminal-amber: #ffd60a;
+  --terminal-amber-rgb: 255, 214, 10;
+  --terminal-selection: #3f638b;
+  --terminal-selection-text: #ffffff;
+  --terminal-shadow-rgb: 0, 0, 0;
+}
+
+@mixin apple-system-colors-light {
+  --terminal-bg: #feffff;
+  --terminal-bg-rgb: 254, 255, 255;
+  --terminal-surface: #ffffff;
+  --terminal-surface-raised: #f2f2f4;
+  --terminal-border: #7d7d82;
+  --terminal-text: #000000;
+  --terminal-text-strong: #000000;
+  --terminal-text-subtle: #252527;
+  --terminal-muted: #464646;
+  --terminal-green: #1f7f2e;
+  --terminal-green-rgb: 31, 127, 46;
+  --terminal-green-strong: #176823;
+  --terminal-blue: #0869cb;
+  --terminal-blue-hover: #064f9b;
+  --terminal-blue-rgb: 8, 105, 203;
+  --terminal-purple: #7d359e;
+  --terminal-amber: #765f00;
+  --terminal-amber-rgb: 118, 95, 0;
+  --terminal-selection: #abd8ff;
+  --terminal-selection-text: #000000;
+  --terminal-shadow-rgb: 70, 70, 70;
+}
+
+:root {
+  @include apple-system-colors-dark;
+  color-scheme: dark;
+  background: var(--terminal-bg);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include apple-system-colors-light;
+    color-scheme: light;
+  }
+}
+
+html[data-theme="dark"] {
+  @include apple-system-colors-dark;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  @include apple-system-colors-light;
+  color-scheme: light;
+}
+
 .linux-cli-theme {
   min-width: 0;
-  background: $terminal-bg;
-  color: $terminal-text;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
   font-family: $terminal-sans;
   font-size: 16px;
   line-height: 1.65;
 
   ::selection {
-    background: $terminal-green;
-    color: $terminal-bg;
+    background: var(--terminal-selection);
+    color: var(--terminal-selection-text);
   }
 
   a {
-    color: $terminal-blue;
-    text-decoration-color: rgba($terminal-blue, .45);
+    color: var(--terminal-blue);
+    text-decoration-color: rgba(var(--terminal-blue-rgb), .55);
     text-underline-offset: .18em;
 
     &:hover {
-      color: lighten($terminal-blue, 8%);
+      color: var(--terminal-blue-hover);
       text-decoration-color: currentColor;
     }
 
     &:focus-visible {
-      outline: 2px solid $terminal-green;
+      outline: 2px solid var(--terminal-green);
       outline-offset: 3px;
     }
   }
@@ -51,9 +113,9 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     left: .75rem;
     z-index: 100;
     padding: .65rem .9rem;
-    border: 1px solid $terminal-green;
-    background: $terminal-bg;
-    color: $terminal-green;
+    border: 1px solid var(--terminal-green);
+    background: var(--terminal-bg);
+    color: var(--terminal-green);
     font-family: $terminal-mono;
     transform: translateY(-200%);
 
@@ -63,9 +125,9 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
   }
 
   .masthead {
-    border-bottom: 1px solid $terminal-border;
-    background: rgba($terminal-bg, .96);
-    box-shadow: 0 1px 0 rgba($terminal-green, .06);
+    border-bottom: 1px solid var(--terminal-border);
+    background: rgba(var(--terminal-bg-rgb), .96);
+    box-shadow: 0 1px 0 rgba(var(--terminal-green-rgb), .12);
     animation: none;
     backdrop-filter: blur(10px);
   }
@@ -81,13 +143,13 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     background: transparent;
 
     a {
-      color: $terminal-muted;
+      color: var(--terminal-muted);
       font-size: .82rem;
       font-weight: 500;
       text-decoration: none;
 
       &:hover {
-        color: $terminal-green;
+        color: var(--terminal-green);
       }
     }
 
@@ -97,26 +159,26 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       background: transparent;
 
       &:focus-visible {
-        outline: 2px solid $terminal-green;
+        outline: 2px solid var(--terminal-green);
         outline-offset: 2px;
       }
     }
 
     .visible-links a::before {
-      background: $terminal-green;
+      background: var(--terminal-green);
     }
 
     .hidden-links {
-      border: 1px solid $terminal-border;
-      background: $terminal-surface-raised;
+      border: 1px solid var(--terminal-border);
+      background: var(--terminal-surface-raised);
       box-shadow: 0 12px 30px rgba(#000, .35);
 
       &::before {
-        border-color: $terminal-border transparent;
+        border-color: var(--terminal-border) transparent;
       }
 
       &::after {
-        border-color: $terminal-surface-raised transparent;
+        border-color: var(--terminal-surface-raised) transparent;
       }
     }
   }
@@ -128,24 +190,24 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
   .terminal-brand {
     display: inline-flex;
     align-items: center;
-    color: $terminal-text !important;
+    color: var(--terminal-text) !important;
     font-size: .88rem !important;
   }
 
   .terminal-brand__user,
   .terminal-prompt {
-    color: $terminal-green;
+    color: var(--terminal-green);
   }
 
   .terminal-brand__path {
-    color: $terminal-blue;
+    color: var(--terminal-blue);
   }
 
   .terminal-cursor {
     width: .62em;
     height: 1.15em;
     margin-left: .24rem;
-    background: $terminal-green;
+    background: var(--terminal-green);
     animation: terminal-blink 1.1s steps(1, end) infinite;
   }
 
@@ -162,23 +224,24 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 
   .sidebar,
   .page {
+    display: flex;
     float: none;
+    align-self: stretch;
+    flex-direction: column;
     width: auto;
     min-width: 0;
     margin: 0;
     padding: 0;
   }
 
-  .sidebar {
-    align-self: start;
-  }
-
   .profile_box,
   .page__inner-wrap {
-    border: 1px solid $terminal-border;
+    flex: 1 1 auto;
+    width: 100%;
+    border: 1px solid var(--terminal-border);
     border-radius: 3px;
-    background: $terminal-surface;
-    box-shadow: 0 18px 50px rgba(#000, .18);
+    background: var(--terminal-surface);
+    box-shadow: 0 18px 50px rgba(var(--terminal-shadow-rgb), .18);
   }
 
   .profile_box {
@@ -197,12 +260,42 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     justify-content: space-between;
     gap: 1rem;
     padding: .55rem .8rem;
-    border-bottom: 1px solid $terminal-border;
-    background: $terminal-surface-raised;
-    color: $terminal-muted;
+    border-bottom: 1px solid var(--terminal-border);
+    background: var(--terminal-surface-raised);
+    color: var(--terminal-muted);
     font-family: $terminal-mono;
     font-size: .75rem;
     line-height: 1.2;
+  }
+
+  .document-window__status {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  .theme-selector__label {
+    color: var(--terminal-green);
+  }
+
+  .theme-selector {
+    min-height: 30px;
+    padding: .2rem 1.65rem .2rem .45rem;
+    border: 1px solid var(--terminal-border);
+    border-radius: 2px;
+    background-color: var(--terminal-surface);
+    color: var(--terminal-text);
+    font: inherit;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--terminal-green);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--terminal-green);
+      outline-offset: 2px;
+    }
   }
 
   .author__avatar {
@@ -210,8 +303,8 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     max-width: none;
     margin: .9rem .9rem 0;
     padding: .35rem;
-    border: 1px solid $terminal-border;
-    background: $terminal-bg;
+    border: 1px solid var(--terminal-border);
+    background: var(--terminal-bg);
 
     img {
       width: 100%;
@@ -228,14 +321,14 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 
   .author__name {
     margin: 0 0 .35rem;
-    color: $terminal-green-strong;
+    color: var(--terminal-green-strong);
     font-family: $terminal-mono;
     font-size: 1.1rem;
     line-height: 1.35;
 
     &::before {
       content: "user: ";
-      color: $terminal-muted;
+      color: var(--terminal-muted);
       font-size: .75rem;
       font-weight: 400;
     }
@@ -244,7 +337,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
   .author__bio,
   .author__affiliation {
     margin: .2rem 0;
-    color: $terminal-text;
+    color: var(--terminal-text);
     font-family: $terminal-mono;
     font-size: .82rem;
     line-height: 1.5;
@@ -252,12 +345,12 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 
   .author__bio::before {
     content: "role: ";
-    color: $terminal-muted;
+    color: var(--terminal-muted);
   }
 
   .author__affiliation::before {
     content: "org:  ";
-    color: $terminal-muted;
+    color: var(--terminal-muted);
   }
 
   .author__urls-wrapper {
@@ -273,7 +366,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     margin: 0;
     padding: .7rem 0 0;
     border: 0;
-    border-top: 1px dashed $terminal-border;
+    border-top: 1px dashed var(--terminal-border);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
@@ -287,7 +380,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       position: relative;
       margin: .15rem 0;
       padding: .24rem 0 .24rem 1.05rem;
-      color: $terminal-muted;
+      color: var(--terminal-muted);
       font-family: $terminal-mono;
       font-size: .82rem;
       line-height: 1.45;
@@ -297,7 +390,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
         content: ">";
         position: absolute;
         left: 0;
-        color: $terminal-green;
+        color: var(--terminal-green);
       }
 
       > i,
@@ -310,7 +403,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       display: inline;
       margin: 0;
       padding: .2rem 0;
-      color: $terminal-blue;
+      color: var(--terminal-blue);
       font-family: $terminal-mono;
       font-size: inherit;
     }
@@ -326,7 +419,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 
   .page__content {
     padding: clamp(1.1rem, 3vw, 2.4rem);
-    color: $terminal-text;
+    color: var(--terminal-text);
 
     #about-me {
       margin: 0;
@@ -347,14 +440,14 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     h4,
     h5,
     h6 {
-      color: $terminal-text;
+      color: var(--terminal-text);
       font-family: $terminal-mono;
     }
 
     h1 {
       margin: 2.8rem 0 1rem;
       padding: 0 0 .65rem;
-      border-bottom: 1px solid $terminal-border;
+      border-bottom: 1px solid var(--terminal-border);
       font-size: clamp(1.35rem, 2.5vw, 1.75rem);
       line-height: 1.35;
       scroll-margin-top: 6rem;
@@ -370,7 +463,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
         width: auto;
         height: auto;
         margin: 0;
-        color: $terminal-green;
+        color: var(--terminal-green);
       }
     }
 
@@ -394,31 +487,31 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       margin-bottom: .55rem;
 
       &::marker {
-        color: $terminal-green;
+        color: var(--terminal-green);
       }
     }
 
     strong {
-      color: lighten($terminal-text, 6%);
+      color: var(--terminal-text-strong);
     }
 
     em {
-      color: $terminal-purple;
+      color: var(--terminal-purple);
     }
   }
 
   .citation-badge {
-    border-color: $terminal-border;
+    border-color: var(--terminal-border);
     border-radius: 2px;
     font-family: $terminal-mono;
     vertical-align: -.22em;
 
     &:hover {
-      border-color: $terminal-green;
+      border-color: var(--terminal-green);
 
       .citation-badge__label,
       .citation-badge__value {
-        background: $terminal-surface-raised;
+        background: var(--terminal-surface-raised);
       }
     }
   }
@@ -426,30 +519,30 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
   .citation-badge__label,
   .citation-badge__value {
     padding: .1rem .38rem;
-    background: $terminal-surface-raised;
+    background: var(--terminal-surface-raised);
     font-size: .75rem;
   }
 
   .citation-badge__label {
-    color: $terminal-muted;
+    color: var(--terminal-muted);
   }
 
   .citation-badge__value {
-    border-left: 1px solid $terminal-border;
-    color: $terminal-green;
+    border-left: 1px solid var(--terminal-border);
+    color: var(--terminal-green);
   }
 
   .publication-year {
     margin: 2.25rem 0 0;
     padding: 0 0 .45rem;
-    border-bottom: 1px dashed $terminal-border;
-    color: $terminal-amber;
+    border-bottom: 1px dashed var(--terminal-border);
+    color: var(--terminal-amber);
     font-family: $terminal-mono;
     font-size: 1rem;
 
     &::before {
       content: "## ";
-      color: $terminal-green;
+      color: var(--terminal-green);
     }
   }
 
@@ -457,7 +550,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     display: grid;
     margin: 0;
     padding: 1.25rem 0;
-    border-bottom: 1px dashed $terminal-border;
+    border-bottom: 1px dashed var(--terminal-border);
     grid-template-columns: minmax(170px, 26%) minmax(0, 1fr);
     gap: 1.25rem;
 
@@ -480,9 +573,9 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     .publication-thumbnail {
       min-height: 150px;
       padding: 1rem;
-      border: 1px solid $terminal-border;
+      border: 1px solid var(--terminal-border);
       border-radius: 2px;
-      background: $terminal-bg;
+      background: var(--terminal-bg);
       box-shadow: none;
 
       &::before,
@@ -491,8 +584,8 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       }
 
       &:hover {
-        border-color: $terminal-green;
-        box-shadow: 0 0 0 1px rgba($terminal-green, .12);
+        border-color: var(--terminal-green);
+        box-shadow: 0 0 0 1px rgba(var(--terminal-green-rgb), .18);
         transform: none;
       }
 
@@ -509,9 +602,9 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       z-index: 3;
       margin: 0;
       padding: .28rem .5rem;
-      border: 1px solid rgba($terminal-amber, .5);
-      background: $terminal-bg;
-      color: $terminal-amber;
+      border: 1px solid rgba(var(--terminal-amber-rgb), .6);
+      background: var(--terminal-bg);
+      color: var(--terminal-amber);
       font-family: $terminal-mono;
       font-size: .75rem;
       line-height: 1.2;
@@ -526,15 +619,15 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 
       &::before {
         content: "### ";
-        color: $terminal-green;
+        color: var(--terminal-green);
       }
 
       a {
-        color: $terminal-text;
+        color: var(--terminal-text);
         text-decoration: none;
 
         &:hover {
-          color: $terminal-blue;
+          color: var(--terminal-blue);
         }
       }
     }
@@ -549,11 +642,11 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
     }
 
     .publication-card__venue {
-      color: $terminal-muted;
+      color: var(--terminal-muted);
     }
 
     .publication-card__summary {
-      color: darken($terminal-text, 5%);
+      color: var(--terminal-text-subtle);
     }
 
     .publication-card__keywords {
@@ -562,16 +655,16 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
 
       span {
         padding: .12rem .4rem;
-        border: 1px solid $terminal-border;
+        border: 1px solid var(--terminal-border);
         border-radius: 2px;
-        background: $terminal-bg;
-        color: $terminal-purple;
+        background: var(--terminal-bg);
+        color: var(--terminal-purple);
         font-family: $terminal-mono;
         font-size: .75rem;
 
         &::before,
         &::after {
-          color: $terminal-muted;
+          color: var(--terminal-muted);
         }
 
         &::before {
@@ -596,30 +689,30 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
         border: 0;
         border-radius: 0;
         background: transparent;
-        color: $terminal-blue;
+        color: var(--terminal-blue);
         font-size: .75rem;
         line-height: 1.5;
 
         &::before {
           content: "[";
-          color: $terminal-muted;
+          color: var(--terminal-muted);
         }
 
         &::after {
           content: "]";
-          color: $terminal-muted;
+          color: var(--terminal-muted);
         }
       }
 
       a:hover {
         border: 0;
         background: transparent;
-        color: lighten($terminal-blue, 8%);
+        color: var(--terminal-blue-hover);
         text-decoration: underline;
       }
 
       .show_paper_citations {
-        color: $terminal-green;
+        color: var(--terminal-green);
       }
     }
   }
@@ -627,7 +720,7 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
   .navicon,
   .navicon::before,
   .navicon::after {
-    background: $terminal-green;
+    background: var(--terminal-green);
   }
 }
 
@@ -705,8 +798,30 @@ $terminal-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", 
       padding: 1rem;
     }
 
-    .document-window__bar span:last-child {
+    .document-window__encoding {
       display: none;
+    }
+
+    .document-window__bar {
+      gap: .5rem;
+    }
+
+    .document-window__status {
+      gap: .4rem;
+    }
+
+    .theme-selector {
+      min-height: 44px;
+    }
+
+    .theme-selector__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
     }
 
     .author__urls {
