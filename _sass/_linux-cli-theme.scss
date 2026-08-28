@@ -90,6 +90,12 @@ html[data-theme="light"] {
   font-size: 16px;
   line-height: 1.65;
 
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+  }
+
   ::selection {
     background: var(--terminal-selection);
     color: var(--terminal-selection-text);
