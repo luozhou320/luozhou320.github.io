@@ -77,8 +77,6 @@ html[data-theme="light"] {
 }
 
 .linux-cli-theme {
-  --terminal-masthead-height: calc(44px + 1.4rem + 1px);
-
   min-width: 0;
   min-height: 100vh;
   min-height: 100dvh;
@@ -262,14 +260,12 @@ html[data-theme="light"] {
   .profile_box__sticky {
     display: flex;
     position: sticky;
-    top: calc(var(--terminal-masthead-height) + 1px);
-    z-index: 2;
+    top: 5rem;
     overflow: hidden;
     flex-direction: column;
     align-items: stretch;
     border-radius: 3px;
     background: var(--terminal-surface);
-    box-shadow: 0 0 0 1px var(--terminal-border);
   }
 
   .terminal-panel__bar,
