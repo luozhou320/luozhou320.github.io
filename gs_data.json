@@ -1,0 +1,224 @@
+{
+  "container_type": "Author",
+  "filled": [
+    "basics",
+    "publications",
+    "indices",
+    "counts"
+  ],
+  "scholar_id": "3w2CkwIAAAAJ",
+  "source": "AUTHOR_PROFILE_PAGE",
+  "name": "Luo Zhou",
+  "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=3w2CkwIAAAAJ&citpid=12",
+  "affiliation": "Donghua University",
+  "organization": 14308591029180249692,
+  "interests": [
+    "Mobile Sensing",
+    "IoT Security & Privacy"
+  ],
+  "email_domain": "@mail.dhu.edu.cn",
+  "citedby": 52,
+  "publications": {
+    "3w2CkwIAAAAJ:2osOgNQ5qMEC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Light projection-based physical-world vanishing attack against car detection",
+        "pub_year": "2023",
+        "citation": "ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and …, 2023"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:2osOgNQ5qMEC",
+      "num_citations": 21,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5900179017240178689",
+      "cites_id": [
+        "5900179017240178689"
+      ]
+    },
+    "3w2CkwIAAAAJ:qjMakFHDy7sC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Opticloak: Blinding vision-based autonomous driving systems through adversarial optical projection",
+        "pub_year": "2024",
+        "citation": "IEEE Internet of Things Journal 11 (17), 28931-28944, 2024"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:qjMakFHDy7sC",
+      "num_citations": 15,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8190770337648842619",
+      "cites_id": [
+        "8190770337648842619"
+      ]
+    },
+    "3w2CkwIAAAAJ:IjCSPb-OGe4C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Combating voice spoofing attacks on wearables via speech movement sequences",
+        "pub_year": "2024",
+        "citation": "IEEE Transactions on Dependable and Secure Computing 22 (1), 819-832, 2024"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:IjCSPb-OGe4C",
+      "num_citations": 9,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15852040820807766314",
+      "cites_id": [
+        "15852040820807766314"
+      ]
+    },
+    "3w2CkwIAAAAJ:d1gkVwhDpl0C": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Baroauth: Harnessing ear canal deformation for speaking user authentication on earbuds",
+        "pub_year": "2025",
+        "citation": "2025 IEEE 45th International Conference on Distributed Computing Systems …, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:d1gkVwhDpl0C",
+      "num_citations": 2,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=801656145454523391",
+      "cites_id": [
+        "801656145454523391"
+      ]
+    },
+    "3w2CkwIAAAAJ:UeHWp8X0CEIC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Fooling 3d face recognition with one single 2d image",
+        "pub_year": "2024",
+        "citation": "Proceedings of the 32nd ACM International Conference on Multimedia, 4043-4052, 2024"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:UeHWp8X0CEIC",
+      "num_citations": 2,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13790612742689636609",
+      "cites_id": [
+        "13790612742689636609"
+      ]
+    },
+    "3w2CkwIAAAAJ:W7OEmFMy1HYC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "AirSpy: An Air-pinch Keystroke Inference Attack on Virtual Keyboards in VR Systems",
+        "pub_year": "2026",
+        "citation": "IEEE Transactions on Consumer Electronics, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:W7OEmFMy1HYC",
+      "num_citations": 1,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14848949353293564539",
+      "cites_id": [
+        "14848949353293564539"
+      ]
+    },
+    "3w2CkwIAAAAJ:9yKSN-GCB0IC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Black-box 3D Face Reconstruction Attack on Face Recognition from a Single Image",
+        "pub_year": "2025",
+        "citation": "IEEE Internet of Things Journal, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:9yKSN-GCB0IC",
+      "num_citations": 1,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2524367319006315495",
+      "cites_id": [
+        "2524367319006315495"
+      ]
+    },
+    "3w2CkwIAAAAJ:Se3iqnhoufwC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Super-Resolution Reconstruction of Remote Sensing Images Based on GAN",
+        "pub_year": "2021",
+        "citation": "2021 IEEE International Conference on Data Science and Computer Application …, 2021"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:Se3iqnhoufwC",
+      "num_citations": 1,
+      "citedby_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1335892577181075034",
+      "cites_id": [
+        "1335892577181075034"
+      ]
+    },
+    "3w2CkwIAAAAJ:LkGwnXOMwfcC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "MAGIC: Multi-Grained Conditional Diffusion for High-Fidelity PPG-to-ECG Translation",
+        "pub_year": "2026",
+        "citation": "IEEE Journal of Biomedical and Health Informatics, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:LkGwnXOMwfcC",
+      "num_citations": 0
+    },
+    "3w2CkwIAAAAJ:_FxGoFyzp5QC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Baro2Talk: Reconstructing Spectrograms from Ear Canal Pressure for Voice-free Communication",
+        "pub_year": "2026",
+        "citation": "IEEE INFOCOM 2026-IEEE Conference on Computer Communications, 1-10, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:_FxGoFyzp5QC",
+      "num_citations": 0
+    },
+    "3w2CkwIAAAAJ:ufrVoPGSRksC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Speak and Be Known: Authenticating Users via Ear Canal Deformation on Earbuds",
+        "pub_year": "2026",
+        "citation": "IEEE Transactions on Mobile Computing, 2026"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:ufrVoPGSRksC",
+      "num_citations": 0
+    },
+    "3w2CkwIAAAAJ:eQOLeE2rZwMC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "Aclipse: Attention-Based Cascaded Learning Enabling Privacy-Preserving Speech Emotion Recognition",
+        "pub_year": "2025",
+        "citation": "2025 IEEE 31th International Conference on Parallel and Distributed Systems …, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:eQOLeE2rZwMC",
+      "num_citations": 0
+    },
+    "3w2CkwIAAAAJ:Tyk-4Ss8FVUC": {
+      "container_type": "Publication",
+      "source": "AUTHOR_PUBLICATION_ENTRY",
+      "bib": {
+        "title": "A Secure Multimodal Retrieval Framework for Consumer Electronics under AI-driven Attacks",
+        "pub_year": "2025",
+        "citation": "IEEE Transactions on Consumer Electronics, 2025"
+      },
+      "filled": false,
+      "author_pub_id": "3w2CkwIAAAAJ:Tyk-4Ss8FVUC",
+      "num_citations": 0
+    }
+  },
+  "citedby5y": 52,
+  "hindex": 3,
+  "hindex5y": 3,
+  "i10index": 2,
+  "i10index5y": 2,
+  "cites_per_year": {
+    "2022": 1,
+    "2023": 0,
+    "2024": 16,
+    "2025": 16,
+    "2026": 19
+  },
+  "updated": "2026-09-03T12:45:44.353500+00:00"
+}
