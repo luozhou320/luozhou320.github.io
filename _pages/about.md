@@ -4,7 +4,7 @@ title: About
 permalink: /
 
 profile:
-  image: prof_pic.jpg
+  image: portrait.jpg
   image_circular: false
   local_name: 周骆
   role: Postdoctoral Researcher

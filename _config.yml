@@ -16,8 +16,8 @@ footer_text: >
   Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: academic homepage, mobile computing, wearable computing, ubiquitous sensing, IoT security, earable sensing
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🌐 # neutral globe favicon
-apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
+icon: favicon.png
+apple_touch_icon: favicon.png # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 url: https://luozhou320.github.io
 baseurl:
@@ -112,7 +112,7 @@ max_width: 1100px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true
 serve_schema_org: true
-og_image: /assets/img/prof_pic.jpg
+og_image: /assets/img/portrait.jpg
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
