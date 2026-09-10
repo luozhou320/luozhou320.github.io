@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Check out the homepage
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -61,9 +61,15 @@ jobs:
           PY
 
       - name: Fetch and validate citation data
+        id: fetch_citations
+        continue-on-error: true
+        env:
+          GOOGLE_SCHOLAR_ATTEMPTS: "5"
+          GOOGLE_SCHOLAR_ATTEMPT_TIMEOUT: "90"
         run: python -u google_scholar_crawler/main.py
 
       - name: Publish citation data branch
+        if: steps.fetch_citations.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -81,3 +87,14 @@ jobs:
           git commit -m "Update Google Scholar citation data"
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --force origin HEAD:google-scholar-stats
+
+      - name: Preserve the last successful citation data
+        if: steps.fetch_citations.outcome == 'failure'
+        run: |
+          echo "::warning title=Google Scholar temporarily unavailable::The crawler could not refresh citation data after five attempts. The existing google-scholar-stats branch remains unchanged."
+          {
+            echo "### Citation update deferred"
+            echo
+            echo "Google Scholar could not be reached reliably after five attempts."
+            echo "The homepage will continue using the last successfully published citation data."
+          } >> "${GITHUB_STEP_SUMMARY}"
