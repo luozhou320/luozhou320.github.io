@@ -46,6 +46,37 @@ body.sticky-bottom-footer > footer {
   flex-shrink: 0;
 }
 
+.profile-email-toast {
+  position: fixed;
+  z-index: 1100;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  max-width: min(24rem, calc(100vw - 2.5rem));
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.35rem;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.14);
+  color: var(--global-text-color);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+
+.profile-email-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-email-toast {
+    transition: none;
+  }
+}
+
 /* Author names stay non-interactive; only the site owner is underlined. */
 .publications .author em {
   font-style: normal;
