@@ -62,14 +62,18 @@ jobs:
 
       - name: Fetch and validate citation data
         id: fetch_citations
-        continue-on-error: true
         env:
           GOOGLE_SCHOLAR_ATTEMPTS: "5"
           GOOGLE_SCHOLAR_ATTEMPT_TIMEOUT: "90"
-        run: python -u google_scholar_crawler/main.py
+        run: |
+          if python -u google_scholar_crawler/main.py; then
+            echo "updated=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "updated=false" >> "${GITHUB_OUTPUT}"
+          fi
 
       - name: Publish citation data branch
-        if: steps.fetch_citations.outcome == 'success'
+        if: steps.fetch_citations.outputs.updated == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -89,7 +93,7 @@ jobs:
           git push --force origin HEAD:google-scholar-stats
 
       - name: Preserve the last successful citation data
-        if: steps.fetch_citations.outcome == 'failure'
+        if: steps.fetch_citations.outputs.updated != 'true'
         run: |
           echo "::warning title=Google Scholar temporarily unavailable::The crawler could not refresh citation data after five attempts. The existing google-scholar-stats branch remains unchanged."
           {
