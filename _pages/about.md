@@ -4,7 +4,7 @@ title: About
 permalink: /
 
 profile:
-  image: portrait.jpg
+  image: prof_pic.jpg
   image_circular: false
   local_name: 周骆
   role: Postdoctoral Researcher
@@ -16,7 +16,7 @@ profile:
 biography: |
   I am a postdoctoral researcher in the Department of Computer Science and Engineering at [The Hong Kong University of Science and Technology (HKUST)](https://hkust.edu.hk/), where I work with [Prof. Qian Zhang (张黔)](https://seng.hkust.edu.hk/about/people/faculty/qian-zhang). My research investigates how subtle physical signals generated during human–device interaction can enable new sensing capabilities—and how those same signals may expose users to security and privacy risks.
 
-  My work spans mobile and wearable computing, ubiquitous sensing, and IoT security and privacy, with particular interests in earable sensing, user authentication, side-channel security, and privacy-preserving intelligent systems. By combining sensing, signal processing, and system security, I aim to develop practical systems that are both useful and trustworthy. I have published more than ten papers in venues including IEEE INFOCOM, IEEE ICDCS, IEEE TMC, IEEE TDSC, IEEE IoT Journal, ACM MM, and IEEE ICASSP. A complete publication record and current citation metrics are available on my [Google Scholar profile](https://scholar.google.com/citations?user=3w2CkwIAAAAJ&hl=en).
+  My work spans mobile and wearable computing, ubiquitous sensing, and IoT security and privacy, with particular interests in earable sensing, user authentication, side-channel security, and privacy-preserving intelligent systems. By combining sensing, signal processing, and system security, I aim to develop practical systems that are both useful and trustworthy. I have published more than ten papers in venues including IEEE INFOCOM, ICDCS, ICASSP, TMC, TDSC, IoT Journal, and ACM MM. A complete publication record and current citation metrics are available on my [Google Scholar profile](https://scholar.google.com/citations?user=3w2CkwIAAAAJ&hl=en).
 
   I received my Ph.D. in Software Engineering from [Donghua University (DHU)](https://english.dhu.edu.cn/) in June 2026 under the supervision of [Prof. Shan Chang (常姗)](https://www.dhu.edu.cn/2021/0603/c19081a227424/pagem.htm). In 2023, I was a visiting scholar at the University of Electronic Science and Technology of China, where I worked with [Prof. Li Lu (鲁力)](https://www.scse.uestc.edu.cn/info/1081/12001.htm) on earable sensing systems. Before beginning my doctoral studies, I worked as an engineer on mobile and industrial IoT systems. This industry experience continues to shape my emphasis on practical and deployable research. During my doctoral training, I was recognized as a DHU Outstanding Graduate, and my dissertation received the DHU Outstanding Ph.D. Thesis award.
 ---

@@ -26,7 +26,7 @@ The site is built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https:
 | Education, experience, and research project           | `_data/cv.yml`                    |
 | Publications and resource metadata                    | `_bibliography/papers.bib`        |
 | Email and academic/social profiles                    | `_data/socials.yml`               |
-| Profile photograph                                    | `assets/img/portrait.jpg`         |
+| Profile photograph                                    | `assets/img/prof_pic.jpg`         |
 | Publication thumbnails                                | `assets/img/publication_preview/` |
 | CV, papers, slides, and posters                       | `assets/pdf/`                     |
 | Site settings, analytics, and layout options          | `_config.yml`                     |
