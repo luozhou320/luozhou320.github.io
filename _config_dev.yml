@@ -1,0 +1,3 @@
+# Local preview overrides. Production keeps responsive image generation enabled.
+imagemagick:
+  enabled: false

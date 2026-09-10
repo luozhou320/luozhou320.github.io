@@ -1,0 +1,51 @@
+metadata:
+  last_updated: "2026-09-03"
+papers:
+  "3w2CkwIAAAAJ:_FxGoFyzp5QC":
+    citations: 0
+    title: "Baro2Talk: Reconstructing Spectrograms from Ear Canal Pressure for Voice-free Communication"
+    year: "2026"
+  "3w2CkwIAAAAJ:ufrVoPGSRksC":
+    citations: 0
+    title: "Speak and Be Known: Authenticating Users via Ear Canal Deformation on Earbuds"
+    year: "2026"
+  "3w2CkwIAAAAJ:W7OEmFMy1HYC":
+    citations: 1
+    title: "AirSpy: An Air-pinch Keystroke Inference Attack on Virtual Keyboards in VR Systems"
+    year: "2026"
+  "3w2CkwIAAAAJ:Tyk-4Ss8FVUC":
+    citations: 0
+    title: "A Secure Multimodal Retrieval Framework for Consumer Electronics Under AI-Driven Attacks"
+    year: "2026"
+  "3w2CkwIAAAAJ:d1gkVwhDpl0C":
+    citations: 2
+    title: "BaroAuth: Harnessing Ear Canal Deformation for Speaking User Authentication on Earbuds"
+    year: "2025"
+  "3w2CkwIAAAAJ:eQOLeE2rZwMC":
+    citations: 0
+    title: "Aclipse: Attention-Based Cascaded Learning Enabling Privacy-Preserving Speech Emotion Recognition"
+    year: "2025"
+  "3w2CkwIAAAAJ:9yKSN-GCB0IC":
+    citations: 1
+    title: "Closed-Box 3-D Face Reconstruction Attack on Face Recognition From a Single Image"
+    year: "2025"
+  "3w2CkwIAAAAJ:IjCSPb-OGe4C":
+    citations: 9
+    title: "Combating Voice Spoofing Attacks on Wearables via Speech Movement Sequences"
+    year: "2025"
+  "3w2CkwIAAAAJ:qjMakFHDy7sC":
+    citations: 15
+    title: "OptiCloak: Blinding Vision-Based Autonomous Driving Systems Through Adversarial Optical Projection"
+    year: "2024"
+  "3w2CkwIAAAAJ:UeHWp8X0CEIC":
+    citations: 2
+    title: "Fooling 3D Face Recognition with One Single 2D Image"
+    year: "2024"
+  "3w2CkwIAAAAJ:2osOgNQ5qMEC":
+    citations: 21
+    title: "Light Projection-Based Physical-World Vanishing Attack Against Car Detection"
+    year: "2023"
+  "3w2CkwIAAAAJ:Se3iqnhoufwC":
+    citations: 1
+    title: "Super-Resolution Reconstruction of Remote Sensing Images Based on GAN"
+    year: "2021"

@@ -1,0 +1,86 @@
+cv:
+  name: Luo Zhou (周骆)
+  label: Postdoctoral Researcher
+  email: luozhou320@gmail.com
+  location: Hong Kong, China
+  image: ""
+  summary: >
+    Postdoctoral researcher at HKUST working at the intersection of mobile and wearable computing,
+    ubiquitous sensing, and IoT security and privacy.
+
+  social_networks:
+    - network: GitHub
+      username: luozhou320
+    - network: ORCID
+      username: 0009-0007-0455-8086
+
+  sections:
+    Education:
+      - institution: Donghua University
+        location: Shanghai, China
+        area: Software Engineering
+        studyType: Ph.D. Degree
+        start_date: 2022
+        end_date: 2026
+        highlights:
+          - Advised by Prof. Shan Chang (常姗).
+          - Research focused on IoT security, mobile sensing, and computing.
+
+      - institution: Jiangsu University of Science and Technology
+        location: Jiangsu, China
+        area: Electronic and Information Engineering
+        studyType: Master's Degree
+        start_date: 2017
+        end_date: 2020
+        highlights:
+          - Advised by Prof. Zhen Liu (刘镇).
+
+      - institution: Tianjin Renai College
+        location: Tianjin, China
+        area: Electronic and Information Engineering
+        studyType: Bachelor's Degree
+        start_date: 2013
+        end_date: 2017
+
+    Experience:
+      - company: The Hong Kong University of Science and Technology
+        position: Postdoctoral Researcher
+        location: Hong Kong, China
+        start_date: 2026
+        end_date: Present
+        summary: Department of Computer Science and Engineering; working with Prof. Qian Zhang (张黔).
+
+      - company: University of Electronic Science and Technology of China
+        position: Visiting Scholar
+        location: Chengdu, China
+        start_date: 2023
+        end_date: 2023
+        summary: Advised by Prof. Li Lu (鲁力).
+        highlights:
+          - Developed an earable sensing prototype for wearable sensing and security research.
+
+      - company: Nanjing FiberHome Starry Sky Communication Co., Ltd.
+        position: Mobile & IoT Systems Engineer
+        location: Nanjing, China
+        start_date: 2020
+        end_date: 2022
+
+      - company: China Aviation Industry Information Center
+        position: Industrial IoT Systems Engineer
+        location: China
+        start_date: 2019
+        end_date: 2020
+
+    Projects:
+      - name: Perception Enhancement for Wearable Devices with MEMS Sensors
+        start_date: 2025
+        end_date: 2026
+        summary: Doctoral Student Innovation Fund, Donghua University (Grant No. CUSF-DH-D-2025031).
+        highlights:
+          - Project Lead
+
+    Skills:
+      - name: Research Interests
+        level: Research
+        icon: fa-solid fa-flask
+        keywords: Mobile and wearable computing, ubiquitous sensing, earable sensing, user authentication, side-channel security, privacy-preserving intelligent systems

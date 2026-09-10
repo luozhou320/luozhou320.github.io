@@ -1,390 +1,55 @@
 ---
+# Local site-level style entry. Theme partials continue to come from al_folio_core.
 ---
 
-/*
- *    Minimal Mistakes Jekyll Theme
- *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
- *
-*/
+@charset "utf-8";
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
-@import "variables";
-@import "mixins";
-@import "vendor/susy/susy";
+@use "sass:math";
+@use "sass:string";
 
-@import "reset";
-@import "base";
+@use "variables" with (
+  $max-content-width: {{site.max_width | default: "930px"}}
+);
 
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
+@use "themes";
+@use "layout";
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+@use "tabs";
+@use "teachings";
+@use "typograms";
 
-@import "forms";
-
-@import "page";
-@import "archive";
-@import "sidebar";
-
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
-
-.paper-box {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
-
-    .paper-box-image{
-        justify-content: center;
-        display: flex;
-        width: 100%;
-        order: 2;
-        img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
-            object-fit: cover;
-        }
-    }
-    
-    .paper-box-text{
-        max-width: 100%;
-        order: 1;
-    }
-    
-    @include breakpoint($medium) {
-        .paper-box-image{
-            justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
-            order: 1;
-        }
-        
-        .paper-box-text{
-            justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
-            order: 2;
-        }
-
-    }
-
-
+/* GitHub-inspired accent for the light theme. The dark theme keeps its own token. */
+:root {
+  --global-theme-color: #0969da;
+  --global-hover-color: #0550ae;
 }
 
-$scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
-    margin-top: -$scroll_offset;
+/* Keep short-page footers at the viewport edge without fixing them on screen. */
+body.sticky-bottom-footer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
-    color: white;
-    background-color: #00369f;
-    font-size: .8em;
+body.sticky-bottom-footer > .container[role="main"] {
+  width: 100%;
+  flex: 1 0 auto;
 }
 
-.citation-badge {
-    display: inline-flex;
-    align-items: stretch;
-    margin: 0 .15rem;
-    overflow: hidden;
-    border: 1px solid #cfd8e2;
-    border-radius: 3px;
-    vertical-align: -.28em;
-    white-space: nowrap;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-
-        .citation-badge__label {
-            background: #e8edf2;
-        }
-
-        .citation-badge__value {
-            background: #8fbee9;
-        }
-    }
+body.sticky-bottom-footer > footer {
+  flex-shrink: 0;
 }
 
-.citation-badge__label,
-.citation-badge__value {
-    display: inline-flex;
-    align-items: center;
-    padding: .14rem .42rem;
-    font-size: .78rem;
-    line-height: 1.35;
+/* Author names stay non-interactive; only the site owner is underlined. */
+.publications .author em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.16em;
 }
-
-.citation-badge__label {
-    gap: .25rem;
-    background: #f1f3f5;
-    color: #454b50;
-    font-weight: 500;
-}
-
-.citation-badge__value {
-    background: #a9d0f3;
-    color: #243b53;
-    font-weight: 700;
-}
-
-.publication-year {
-    margin: 2rem 0 0;
-    padding-bottom: .45rem;
-    border-bottom: 2px solid mix(#00369f, white, 18%);
-    color: #00369f;
-    font-size: 1.35rem;
-}
-
-.publication-card {
-    align-items: stretch;
-    padding: 1.4rem 0;
-
-    .publication-card__media {
-        align-items: stretch;
-        order: 1;
-    }
-
-    .publication-card__media-inner {
-        position: relative;
-        width: 100%;
-        max-width: 420px;
-
-        > .badge {
-            z-index: 2;
-        }
-    }
-
-    .publication-thumbnail {
-        position: relative;
-        display: flex;
-        min-height: 170px;
-        padding: 1.35rem;
-        overflow: hidden;
-        flex-direction: column;
-        justify-content: flex-end;
-        border-radius: 4px;
-        background: linear-gradient(145deg, #173963, #2f77aa);
-        box-shadow: 3px 3px 8px rgba(0, 0, 0, .2);
-        color: #fff;
-        text-decoration: none;
-        isolation: isolate;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            border: 1px solid rgba(255, 255, 255, .28);
-            border-radius: 50%;
-        }
-
-        &::before {
-            width: 165px;
-            height: 165px;
-            top: -74px;
-            right: -42px;
-        }
-
-        &::after {
-            width: 105px;
-            height: 105px;
-            top: -42px;
-            right: -12px;
-        }
-
-        &:hover {
-            color: #fff;
-            transform: translateY(-2px);
-            transition: transform .2s ease;
-        }
-
-        img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            max-width: none;
-            background: #fff;
-            object-fit: contain;
-            box-shadow: none;
-        }
-    }
-
-    .publication-thumbnail--authentication,
-    .publication-thumbnail--privacy {
-        background: linear-gradient(145deg, #5b2d73, #b3568b);
-    }
-
-    .publication-thumbnail--vr,
-    .publication-thumbnail--multimodal {
-        background: linear-gradient(145deg, #114c56, #25a29a);
-    }
-
-    .publication-thumbnail--graph {
-        background: linear-gradient(145deg, #394754, #728797);
-    }
-
-    .publication-thumbnail--vision {
-        background: linear-gradient(145deg, #702f2f, #d46a4c);
-    }
-
-    .publication-thumbnail--remote-sensing {
-        background: linear-gradient(145deg, #42552b, #84a94d);
-    }
-
-    .publication-thumbnail__eyebrow,
-    .publication-thumbnail__title {
-        position: relative;
-        z-index: 1;
-    }
-
-    .publication-thumbnail__eyebrow {
-        margin-bottom: .55rem;
-        font-size: .68rem;
-        font-weight: 700;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-        opacity: .86;
-    }
-
-    .publication-thumbnail__title {
-        display: -webkit-box;
-        overflow: hidden;
-        font-size: .98rem;
-        font-weight: 700;
-        line-height: 1.3;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-    }
-
-    .publication-card__content {
-        align-self: center;
-        order: 2;
-    }
-
-    .publication-card__title {
-        margin: 0 0 .45rem;
-        font-size: 1.12rem;
-        line-height: 1.4;
-    }
-
-    .publication-card__authors,
-    .publication-card__venue,
-    .publication-card__summary {
-        margin: .35rem 0;
-        font-size: .9rem;
-        line-height: 1.55;
-    }
-
-    .publication-card__venue {
-        color: $gray;
-    }
-
-    .publication-card__summary {
-        color: mix($gray, black, 85%);
-    }
-
-    .publication-card__keywords,
-    .publication-card__links {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: .4rem;
-    }
-
-    .publication-card__keywords {
-        margin: .65rem 0;
-
-        span {
-            padding: .18rem .5rem;
-            border-radius: 999px;
-            background: #eef3f8;
-            color: #3d5368;
-            font-size: .7rem;
-            font-weight: 600;
-        }
-    }
-
-    .publication-card__links {
-        margin-top: .75rem;
-
-        a,
-        .show_paper_citations {
-            padding: .28rem .58rem;
-            border: 1px solid #d6dde5;
-            border-radius: 3px;
-            color: #315f91;
-            font-size: .76rem;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        a:hover {
-            border-color: #315f91;
-            background: #f5f8fb;
-        }
-
-        .publication-resource--pdf i {
-            color: #bd2c2c;
-        }
-
-        .publication-resource--slides i {
-            color: #d2691e;
-        }
-
-        .publication-resource--poster i {
-            color: #6a4c93;
-        }
-
-        .publication-resource--code i {
-            color: #333;
-        }
-
-        .publication-resource--demo i {
-            color: #c4302b;
-        }
-    }
-
-    @include breakpoint($medium) {
-        .publication-card__media {
-            width: 30%;
-            min-width: 190px;
-            max-width: 30%;
-        }
-
-        .publication-card__content {
-            width: 70%;
-            max-width: 70%;
-            padding-left: 1.5rem;
-        }
-    }
-}
-
-@import "linux-cli-theme";
