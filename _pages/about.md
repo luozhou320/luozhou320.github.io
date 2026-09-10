@@ -62,16 +62,20 @@ biography: |
           <h2 id="news-heading">News</h2>
           <div class="news-timeline" aria-label="Recent news">
             <div class="news-entry">
-              <time datetime="2026">2026</time>
-              <p><strong>Baro2Talk</strong> was published at IEEE INFOCOM 2026.</p>
+              <time datetime="2026-07">07/2026</time>
+              <p>I accept an offer to join the Department of Computer Science and Engineering at HKUST as a Postdoctoral Fellow.</p>
             </div>
             <div class="news-entry">
-              <time datetime="2026">2026</time>
-              <p><strong>Speak and Be Known</strong> was published in IEEE Transactions on Mobile Computing.</p>
+              <time datetime="2026-07">07/2026</time>
+              <p>Our paper <strong>MAGIC</strong> on PPG-to-ECG translation is accepted for publication in IEEE Journal of Biomedical and Health Informatics.</p>
             </div>
             <div class="news-entry">
-              <time datetime="2026">2026</time>
-              <p><strong>AirSpy</strong> was published in IEEE Transactions on Consumer Electronics.</p>
+              <time datetime="2026-06">06/2026</time>
+              <p>I receive my Ph.D. degree from Donghua University.</p>
+            </div>
+            <div class="news-entry">
+              <time datetime="2026-04">04/2026</time>
+              <p>I am awarded a Student Travel Grant to attend IEEE INFOCOM 2026.</p>
             </div>
           </div>
 
@@ -79,8 +83,40 @@ biography: |
             <summary>Earlier news</summary>
             <div class="news-timeline" aria-label="Earlier news">
               <div class="news-entry">
-                <time datetime="2025">2025</time>
-                <p><strong>BaroAuth</strong> was published at IEEE ICDCS 2025.</p>
+                <time datetime="2026-02">02/2026</time>
+                <p>Our paper on VR air-pinch keystroke inference is accepted for publication in IEEE Transactions on Consumer Electronics.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2026-02">02/2026</time>
+                <p><strong>Speak and Be Known</strong>, an extension of <strong>BaroAuth</strong>, is accepted for publication in IEEE Transactions on Mobile Computing.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2025-12">12/2025</time>
+                <p>Our paper <strong>Baro2Talk</strong> on voice-free communication using in-ear pressure sensing is accepted at IEEE INFOCOM 2026.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2025-10">10/2025</time>
+                <p>Our paper <strong>Aclipse</strong> on privacy-preserving speech emotion recognition is accepted at IEEE ICPADS 2025.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2025-03">03/2025</time>
+                <p>Our paper <strong>BaroAuth</strong> on speaking user authentication with earable devices is accepted at IEEE ICDCS 2025.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2024-07">07/2024</time>
+                <p>Our paper on closed-box attacks against 3D face recognition systems is accepted at ACM Multimedia 2024.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2024-06">06/2024</time>
+                <p>The extension of <strong>VOGUE</strong> is accepted for publication in IEEE Transactions on Dependable and Secure Computing.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2024-05">05/2024</time>
+                <p>Our extended paper on physical adversarial attacks is accepted for publication in IEEE Internet of Things Journal.</p>
+              </div>
+              <div class="news-entry">
+                <time datetime="2023-03">03/2023</time>
+                <p>Our paper on physical adversarial attacks against autonomous driving systems is accepted at IEEE ICASSP 2023.</p>
               </div>
             </div>
           </details>
@@ -216,7 +252,7 @@ biography: |
   .news-entry {
     position: relative;
     display: grid;
-    grid-template-columns: 3.5rem minmax(0, 1fr);
+    grid-template-columns: 4.25rem minmax(0, 1fr);
     gap: 0.75rem;
     align-items: start;
   }
