@@ -11,7 +11,7 @@ The site is built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https:
 - News timeline with collapsible earlier entries
 - Complete BibTeX-driven publication list and selected publications on the homepage
 - Publication previews, abstracts, citation counts, PDFs, slides, posters, code, and external links
-- Dedicated Awards, Service, and CV pages
+- Dedicated Awards, Services, and CV pages
 - Automatic Google Scholar citation updates
 - Google Analytics integration
 - Accessible navigation and a document-flow footer that does not cover page content

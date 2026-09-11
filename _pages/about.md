@@ -21,6 +21,9 @@ biography: |
   I received my Ph.D. in Software Engineering from [Donghua University (DHU)](https://english.dhu.edu.cn/) in June 2026 under the supervision of [Prof. Shan Chang (常姗)](https://www.dhu.edu.cn/2021/0603/c19081a227424/pagem.htm). In 2023, I was a visiting scholar at the University of Electronic Science and Technology of China, where I worked with [Prof. Li Lu (鲁力)](https://www.scse.uestc.edu.cn/info/1081/12001.htm) on earable sensing systems. Before beginning my doctoral studies, I worked as an engineer on mobile and industrial IoT systems. This industry experience continues to shape my emphasis on practical and deployable research. During my doctoral training, I was recognized as a DHU Outstanding Graduate, and my dissertation received the DHU Outstanding Ph.D. Thesis award.
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/publication-list.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/assets/css/publication-preview.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
 <div class="post about-page">
   <article>
     <div class="about-layout">
@@ -216,7 +219,10 @@ biography: |
 
   .about-biography p {
     margin-bottom: 1.15rem;
+    hyphens: auto;
     line-height: 1.75;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .about-main > section + section {
@@ -270,6 +276,7 @@ biography: |
   }
 
   .news-entry time {
+    padding-top: 0.12rem;
     color: var(--global-text-color-light);
     font-variant-numeric: tabular-nums;
     font-weight: 600;
@@ -277,7 +284,10 @@ biography: |
 
   .news-entry p {
     margin: 0;
+    hyphens: auto;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .earlier-news {
@@ -342,7 +352,14 @@ biography: |
       text-align: center;
     }
 
+    .about-biography p,
+    .news-entry p {
+      hyphens: manual;
+      text-align: left;
+    }
+
   }
 </style>
 
+<script defer src="{{ '/assets/js/publication-preview.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/profile-email.js' | relative_url }}"></script>
