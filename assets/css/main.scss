@@ -76,11 +76,3 @@ body.sticky-bottom-footer > footer {
     transition: none;
   }
 }
-
-/* Author names stay non-interactive; only the site owner is underlined. */
-.publications .author em {
-  font-style: normal;
-  text-decoration: underline;
-  text-decoration-thickness: from-font;
-  text-underline-offset: 0.16em;
-}
