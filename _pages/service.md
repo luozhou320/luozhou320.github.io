@@ -24,6 +24,7 @@ nav_order: 4
     <ul class="service-list">
       <li>IEEE Transactions on Dependable and Secure Computing</li>
       <li>IEEE Internet of Things Journal</li>
+      <li>ACM Multimedia</li>
       <li>Peer-to-Peer Networking and Applications</li>
       <li>Scientific Reports</li>
     </ul>
